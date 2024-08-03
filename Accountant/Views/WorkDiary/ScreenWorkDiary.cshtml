@@ -1,0 +1,290 @@
+﻿@model Accountant.Models.ViewModel.CarToWorkDiayToWorkCom
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+@inject IHttpContextAccessor HttpContextAccessor;
+<style>
+    .StatusButtonCar {
+        background-color: #00146bc9;
+        height: 120px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .StatusButtonCar1
+    {
+        height: 120px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+</style>
+<form>
+
+<table>
+      <thead>
+            <tr>
+
+                @if (Model.Car_List_L.Count != 0)
+                {
+                    @foreach (var item in Model.Car_List_L)
+                    {
+                        @if (item.Id == Model.StatusButtonCar)
+                        {
+
+                            <th><a class="btn btn-primary StatusButtonCar" href="~/WorkDiary/ScreenWorkDiary?WorkDiaryEdit_Id=0&WorkDiary_Id=@item.Id">@item.NameCar </a></th>
+                        }
+                        else
+                        {
+                            <th><a class="btn btn-primary StatusButtonCar1" href="~/WorkDiary/ScreenWorkDiary?WorkDiaryEdit_Id=0&WorkDiary_Id=@item.Id">@item.NameCar </a></th>
+                        }
+                    }
+                }
+                else
+                {
+                    <th><a style="height:120px; width:120px" class="btn btn-primary">لا يوجد مركبات </a></th>
+                   
+                }
+
+
+
+                 
+            </tr>
+      </thead>
+</table>
+
+
+
+        
+           
+                        
+
+
+
+
+
+</form>
+
+
+    <form>
+    <table>
+        <thead>
+            <tr>
+                @if (Model.Driver_List_M.Count != 0)
+                {
+
+
+                    @foreach (var item in Model.Driver_List_M)
+                    {
+                        @if (item.Id == Model.StatusButtonDrivr)
+                        {
+                            <style>
+                                .test1 {background-color: #00146bc9;
+                                }</style>
+                            <th><a  style="height:60px; width:120px ;display: flex;justify-content: center;align-items: center;" class="btn btn-primary test1" href="~/WorkDiary/ScreenWorkDiary?Driver_Id=@item.Id&WorkDiary_Id=@HttpContextAccessor?.HttpContext?.Session.GetInt32("Car_Id")">@item.Name </a> </th>
+
+                        }
+                        else
+                        {
+                            <th>
+                                <a style="height:60px; width:120px ; display: flex;justify-content: center;align-items: center;" class="btn btn-primary" href="~/WorkDiary/ScreenWorkDiary?Driver_Id=@item.Id&WorkDiary_Id=@HttpContextAccessor?.HttpContext?.Session.GetInt32("Car_Id")">@item.Name </a>
+                            </th>
+  
+                        }
+
+                    }
+
+                }
+                else
+                {
+                    <th><a style="height:60px; width:120px" class="btn btn-primary">لا يوجد سائقين </a></th>
+                }
+            </tr>
+        </thead>
+    </table>
+                
+
+
+
+
+
+    </form>
+
+<div style="display:flex">
+
+
+    <div class="col-md-3">
+
+
+        <div class="form-group" style="margin:30px 30px 0px 0px">
+            <form asp-action="ScreenWorkDiary">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <span asp-validation-for="WorkDiary_M.Messages" class="text-danger"></span>
+                <span asp-validation-for="WorkDiary_M.Error" class="text-danger"></span>
+
+                <div class="form-group">
+                    <input asp-for="WorkDiary_M.Id" class="form-control" hidden />
+                </div>
+
+
+                
+                @if (Model.Car_M != null)
+                {
+                    <div class="form-group">
+                        <input asp-for="WorkDiary_M.MeansTransportation" class="form-control" value="@Model.Car_M.NameCar" />
+                        <span asp-validation-for="WorkDiary_M.MeansTransportation" class="text-danger"></span>
+                    </div>
+                }
+                else
+                {
+
+                    <div class="form-group">
+                        <input asp-for="WorkDiary_M.MeansTransportation" class="form-control" />
+                        <span asp-validation-for="WorkDiary_M.MeansTransportation" class="text-danger"></span>
+                    </div>
+
+                }
+
+
+                <div class="form-group">
+                    <label asp-for="WorkDiary_M.TransportationLocation" class="control-label"></label>
+                    <input asp-for="WorkDiary_M.TransportationLocation" class="form-control" />
+                    <span asp-validation-for="WorkDiary_M.TransportationLocation" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="WorkDiary_M.DeliveryLocation" class="control-label"></label>
+                    <input asp-for="WorkDiary_M.DeliveryLocation" class="form-control" />
+                    <span asp-validation-for="WorkDiary_M.DeliveryLocation" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="WorkDiary_M.LoadType" class="control-label"></label>
+                    <input asp-for="WorkDiary_M.LoadType" class="form-control" />
+                    <span asp-validation-for="WorkDiary_M.LoadType" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="WorkDiary_M.TransportationPrice" class="control-label"></label>
+                    <input asp-for="WorkDiary_M.TransportationPrice" class="form-control" />
+                    <span asp-validation-for="WorkDiary_M.TransportationPrice" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="WorkDiary_M.OperatorId" class="control-label"></label>
+                    <select asp-for="WorkDiary_M.OperatorId" class="form-control">
+                        <option value="">--اختر المشغل--</option>
+                        @foreach (var item in Model.WorkCompanies_List_M)
+                        {
+
+                            <option value="@item.Id">@item.CompanyName</option>
+                        }
+                    </select>
+
+                    <span asp-validation-for="WorkDiary_M.OperatorId" class="text-danger"></span>
+                </div>
+                @if(Model.PageStatus == true)
+                {
+                    <div class="form-group">
+                    <label asp-for="WorkDiary_M.DriverId" class="control-label"></label>
+                    <select asp-for="WorkDiary_M.DriverId" class="form-control">
+                        <option value="">--اختر السائق--</option>
+                        @foreach (var item in Model.WorkDiary_List_M)
+                        {
+
+                            <option value="@item.driver?.Id">@item.driver?.Name</option>
+                        }
+                    </select>
+
+                    <span asp-validation-for="WorkDiary_M.DriverId" class="text-danger"></span>
+                </div>
+
+                }
+                
+
+                <div class="form-group">
+                    <label asp-for="WorkDiary_M.NumberLoad" class="control-label"></label>
+                    <input asp-for="WorkDiary_M.NumberLoad" class="form-control" />
+                    <span asp-validation-for="WorkDiary_M.NumberLoad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="WorkDiary_M.PaymentType" class="control-label"></label>
+                    <input asp-for="WorkDiary_M.PaymentType" class="form-control" />
+                    <span asp-validation-for="WorkDiary_M.PaymentType" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="WorkDiary_M.CreatedDate" class="control-label"></label>
+                    <input asp-for="WorkDiary_M.CreatedDate" class="form-control"  type="date"/>
+                    <span asp-validation-for="WorkDiary_M.CreatedDate" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group" style="margin-top:10px">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+
+            </form>
+        </div>
+      
+
+    </div>
+    <div class="col-md-9">
+        <form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>موقع النقل</th>
+                        <th>موقع التسليم</th>
+                        <th>نوع الحمولة</th>
+                        <th>عدد الحمولة</th>
+                        <th>صاحب الحمولة</th>
+                        <th>السائق</th>
+                        <th>التاريخ</th>
+                        <th>تعديل</th>
+                        <th>خذف</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.WorkDiary_List_M)
+                    {
+                        <tr>
+                            <td>@item.TransportationLocation</td>
+                            <td>@item.DeliveryLocation</td>
+                            <td>@item.LoadType</td>
+                            <td>@item.NumberLoad</td>
+                            
+                            <td>@item.workCompanies?.CompanyName </td>
+                            <td>@item.driver?.Name</td>
+
+                             
+
+                            
+                            
+                            <td>@item.CreatedDate</td>
+               
+
+                            <th><a class="btn btn-primary" href="~/WorkDiary/ScreenWorkDiary?WorkDiaryEdit_Id=@item.Id&WorkDiary_Id=0">نعديل</a></th>
+
+                            <td><a class="btn btn-primary" href="~/WorkDiary/DeleteWorkDiary?id=@item.Id">خذف</a></td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </form>
+
+
+    </div>
+  
+</div>
+  
+@section Scripts {
+    @{
+        //هذا مهم جدا لانه يقوم بفحص اذا البيانات فاغة ولا لا حسب الي موضع في الفيو اذا اخترنا ان يكون في بيانات
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+        }

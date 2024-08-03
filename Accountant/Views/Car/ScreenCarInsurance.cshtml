@@ -1,0 +1,50 @@
+﻿
+@model CarInsurance
+
+<form asp-action="ScreenCarInsurance">
+    <div class="col-md-10">
+        <div>
+
+            <input type="text" asp-for="Id" class="form-control"  hidden />
+           
+        </div>
+        <div class="form-group col-md-12">
+            <label asp-for="NumberCar" class="control-label"></label>
+            <input asp-for="NumberCar" class="form-control" readonly="true" style="background: #fff" />
+            <span asp-validation-for="NumberCar" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-12">
+            <label asp-for="CarType" class="control-label"></label>
+            <input asp-for="CarType" class="form-control" readonly="true" style="background: #fff" />
+            <span asp-validation-for="CarType" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-12">
+            <label asp-for="CarModel" class="control-label"></label>
+            <input asp-for="CarModel" class="form-control" readonly="true" style="background: #fff" />
+            <span asp-validation-for="CarModel" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label asp-for="InsuranceType" class="control-label"></label>
+            <input asp-for="InsuranceType" class="form-control" />
+            <span asp-validation-for="InsuranceType" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-12">
+            <label asp-for="LicenseStartDate" class="control-label"></label>
+            <input asp-for="LicenseStartDate" class="form-control" />
+            <span asp-validation-for="LicenseStartDate" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-12">
+            <label asp-for="LicenseExpirationDate" class="control-label"></label>
+            <input asp-for="LicenseExpirationDate" class="form-control" />
+            <span asp-validation-for="LicenseExpirationDate" class="text-danger"></span>
+        </div>
+
+
+    </div>
+    <div class="saeve">
+        <input type="submit" value="حفظ" class="btn btn-primary" style="margin:-9px 0px  " />
+
+        <a href="~/car/ScreenEditCar?ID=@Model.CarId">Back to List</a>
+    </div>
+</form>

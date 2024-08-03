@@ -1,0 +1,267 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Accountant
+build_property.RootNamespace = Accountant
+build_property.ProjectDir = C:\Users\PC\Desktop\نسخه جديده\Accountant\Accountant\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\PC\Desktop\نسخه جديده\Accountant\Accountant
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Briefs/ScreenBriefs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJpZWZzXFNjcmVlbkJyaWVmcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Briefs/test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJpZWZzXHRlc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Car/ScreenaCrLicense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXFNjcmVlbmFDckxpY2Vuc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Car/ScreenAddCar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXFNjcmVlbkFkZENhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Car/ScreenCar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXFNjcmVlbkNhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Car/ScreenCarInsurance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXFNjcmVlbkNhckluc3VyYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Car/ScreenEditCar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXFNjcmVlbkVkaXRDYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Company/ScreenCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxTY3JlZW5Db21wYW55LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Company/ScreenEditCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxTY3JlZW5FZGl0Q29tcGFueS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Contracts/ScreenAddContracts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJhY3RzXFNjcmVlbkFkZENvbnRyYWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Contracts/ScreenContracts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJhY3RzXFNjcmVlbkNvbnRyYWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Contracts/ScreenEditContracts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJhY3RzXFNjcmVlbkVkaXRDb250cmFjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/DriversDiary/ScreenDetailsDriversDiary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyc0RpYXJ5XFNjcmVlbkRldGFpbHNEcml2ZXJzRGlhcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/DriversDiary/ScreenDriversDiary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyc0RpYXJ5XFNjcmVlbkRyaXZlcnNEaWFyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Driver/ScreenAddDriver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyXFNjcmVlbkFkZERyaXZlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Driver/ScreenDriver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyXFNjcmVlbkRyaXZlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Driver/ScreenEditDriver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyXFNjcmVlbkVkaXREcml2ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Expenses/DetailsExpenses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZXNcRGV0YWlsc0V4cGVuc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Expenses/ScreenExpenses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZXNcU2NyZWVuRXhwZW5zZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/FuelProvider/ScreenFuelProvider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVlbFByb3ZpZGVyXFNjcmVlbkZ1ZWxQcm92aWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Fuel/ScreenFuel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVlbFxTY3JlZW5GdWVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/GeneralUser/EditGeneralUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFVzZXJcRWRpdEdlbmVyYWxVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/GeneralUser/ScreenAddGeneralUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFVzZXJcU2NyZWVuQWRkR2VuZXJhbFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/GeneralUser/ScreenGeneralUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFVzZXJcU2NyZWVuR2VuZXJhbFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Home/ScreenHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTY3JlZW5Ib21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/InputCompany/ScereenInputCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5wdXRDb21wYW55XFNjZXJlZW5JbnB1dENvbXBhbnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Login/ScreenLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cU2NyZWVuTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/MainUserTem/ScreenMainUserTem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblVzZXJUZW1cU2NyZWVuTWFpblVzZXJUZW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/MainUserTem/ScreenMainUserTemList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblVzZXJUZW1cU2NyZWVuTWFpblVzZXJUZW1MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/MainUser/ScreenAddMainUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblVzZXJcU2NyZWVuQWRkTWFpblVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/MainUser/ScreenEditMainUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblVzZXJcU2NyZWVuRWRpdE1haW5Vc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/MainUser/ScreenMainUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblVzZXJcU2NyZWVuTWFpblVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Monthly/ScreenCalendarMonthly.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9udGhseVxTY3JlZW5DYWxlbmRhck1vbnRobHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Monthly/ScreenMonthly.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9udGhseVxTY3JlZW5Nb250aGx5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/ProgramUser/ScreenAddProgramUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVVzZXJcU2NyZWVuQWRkUHJvZ3JhbVVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/ProgramUser/ScreenEditProgramUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVVzZXJcU2NyZWVuRWRpdFByb2dyYW1Vc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/ProgramUser/ScreenProgramUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVVzZXJcU2NyZWVuUHJvZ3JhbVVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/ProgramUser/ScreenTableProgramUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVVzZXJcU2NyZWVuVGFibGVQcm9ncmFtVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/RepairWorkshops/ScreenRepairWorkshops.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwYWlyV29ya3Nob3BzXFNjcmVlblJlcGFpcldvcmtzaG9wcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/ReportscCar/ScreenAllCar_W_F_E_T.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c2NDYXJcU2NyZWVuQWxsQ2FyX1dfRl9FX1QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/ReportscCar/ScreenReportscCar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c2NDYXJcU2NyZWVuUmVwb3J0c2NDYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Shared/_Layout1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Shared/_Layout2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Shared/_LayoutLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Shared/_LayoutNew.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXROZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/SparePartsCenters/ScreenSparePartsCenters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BhcmVQYXJ0c0NlbnRlcnNcU2NyZWVuU3BhcmVQYXJ0c0NlbnRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Test/IndexTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxJbmRleFRlc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Test/Test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxUZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/TrafficViolations/ScreenTrafficViolations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZmZpY1Zpb2xhdGlvbnNcU2NyZWVuVHJhZmZpY1Zpb2xhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/WorkCompanies/Popupview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya0NvbXBhbmllc1xQb3B1cHZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/WorkCompanies/ScreenAddWorkComp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya0NvbXBhbmllc1xTY3JlZW5BZGRXb3JrQ29tcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/WorkCompanies/ScreenEditWorkComp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya0NvbXBhbmllc1xTY3JlZW5FZGl0V29ya0NvbXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/WorkCompanies/ScreenWorkComp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya0NvbXBhbmllc1xTY3JlZW5Xb3JrQ29tcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/WorkDiary/ScreenWorkDiary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya0RpYXJ5XFNjcmVlbldvcmtEaWFyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/PC/Desktop/نسخه جديده/Accountant/Accountant/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-6qc87xs41h

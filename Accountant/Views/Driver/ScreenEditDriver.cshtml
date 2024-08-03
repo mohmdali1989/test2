@@ -1,0 +1,53 @@
+﻿ @model Driver
+ <form asp-action="ScreenEditDriver">
+     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+     <div>
+        <input type="text" asp-for="Id" class="form-control" hidden /> @* hidden *@
+
+
+
+     </div>
+     <div>
+        <div class="form-group col-md-12">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label asp-for="HobbyNumber" class="control-label"></label>
+            <input asp-for="HobbyNumber" class="form-control" />
+            <span asp-validation-for="HobbyNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label asp-for="PhoneNumber" class="control-label"></label>
+            <input asp-for="PhoneNumber" class="form-control" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label asp-for="LicenseExpirationDate" class="control-label"></label>
+            <input asp-for="LicenseExpirationDate" class="form-control" />
+            <span asp-validation-for="LicenseExpirationDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="PaymentType">نوع الشهرية</label>
+            <select class="form-control" id="PaymentType" asp-for="monthlyTypeId">
+                <option value="1">شهري</option>
+                <option value="2">يومي</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label asp-for="Amount" class="control-label"></label>
+            <input asp-for="Amount" class="form-control" />
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+        <div>
+            <input type="submit" value="Create" class="btn btn-primary" />
+            <a asp-action="ScreenDriver"></a>
+        </div>
+     </div>
+ </form>

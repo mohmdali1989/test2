@@ -1,0 +1,120 @@
+﻿@model Accountant.Models.ViewModel.ViewModelExpenses
+<div>
+    <style>
+        .StatusButtonCar {
+            background-color: #00146bc9;
+            height: 120px;
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .StatusButtonCar1 {
+            height: 120px;
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .TableCar{
+            margin-right:50px;
+             
+        }
+    </style>
+    <div style="display:flex">
+        <div class="TableCar col-md-1">
+            <form>
+                  
+                <table>
+                    <tbody>
+                         
+                            @if (Model.car_List.Count != 0)
+                            {
+                                @foreach (var item in Model.car_List)
+                                {
+                                    @if (item.Id == Model.StatusButtonCar)
+                                    {
+                                        <tr>
+                                        <td><a class="btn btn-primary StatusButtonCar" href="~/Expenses/ScreenExpenses?Car_Id=@item.Id">@item.NameCar </a></td>
+                                       
+                                    </tr>
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                        <td><a class="btn btn-primary StatusButtonCar1" href="~/Expenses/ScreenExpenses?Car_Id=@item.Id">@item.NameCar </a></td>
+                                        </tr>
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td><a style="height:120px; width:120px" class="btn btn-primary">لا يوجد مركبات </a></td>
+                                </tr>
+                            }
+                            
+                         
+                    </tbody>
+                </table>
+
+
+            </form>
+      </div>
+       
+        <div class="col-md-11">
+            @if (Model.car_List.Count != 0)
+            {
+
+                <a class="btn btn-primary" href="~/Expenses/DetailsExpenses?CarID=@Model.IDCar&AddNew=true&Add=false&Edit=false">اضافة بيانات</a>
+
+            }else
+            {
+                <a class="btn btn-primary" href="#" >لا يوجد مركبات</a>
+
+            }
+                        <form asp-action="DetailsExpenses">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center;">التاريخ</th>
+                            <th style="text-align:center;">مجموع سعر التصليح</th>
+                            <th style="text-align:center;">موقع شراء القطع</th>
+                            <th style="text-align:center;">مجموع سعر القطع</th>
+                            <th style="text-align:center;">موقع ورشات التصليح</th>
+                            
+                            <th style="text-align:center;">المركية</th>
+                            <th style="text-align:center;">التفاصيل</th>
+                             
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Expenses)
+                        {
+                            <tr>
+                                <td style="text-align:center;">@item.DateExchange</td>
+                                <td style="text-align:center;">@item.MaintenancePrice</td>
+                                <td style="text-align:center;">@item.sparePartsCenters?.NameCenter</td>
+                                <td style="text-align:center;">@item.TotalPrice</td>
+                                <td style="text-align:center;">@item.repairWorkshops?.NameRepairShop</td>
+
+                                <td style="text-align:center;">@item.car?.NameCar</td>
+                                <th style="text-align:center;"><a class="btn btn-primary" href="~/Expenses/DetailsExpenses?DateExchangeString=@item.DateExchange.ToString("yyyy-MM-dd")&CarID=@item.CarId&AddNew=false">التفاصيل</a></th>
+                            </tr>
+                        }                         
+                    </tbody>
+                </table>
+            </form>
+            @section Scripts {
+                @{
+                    //هذا مهم جدا لانه يقوم بفحص اذا البيانات فاغة ولا لا حسب الي موضع في الفيو اذا اخترنا ان يكون في بيانات
+                    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                }
+            }
+
+        </div>
+    </div>
+</div>

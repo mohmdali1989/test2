@@ -1,0 +1,399 @@
+﻿ @model Accountant.Models.ViewModel.MonthlyViewModel
+
+ 
+<div style="display:flex;height: 80vh;">
+    <div   style="border: 1px dashed;border-radius: 10px;width: 100%;margin: 1px;padding:10px">
+        <form asp-action="ScreenMonthly">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div>
+                <input type="text" asp-for="Monthly_M.id" class="form-control" hidden /> @* hidden *@
+                <input type="text" asp-for="ID_Driver" value="@Model.ID_Driver" hidden /> @* hidden *@
+                <input type="text" asp-for="MonthlyAmount" value="@Model.MonthlyAmount" hidden /> @* hidden *@
+                <input type="text" asp-for="NumberWorkingDays" value="@Model.NumberWorkingDays" hidden /> @* hidden *@
+                <input type="text" asp-for="AfterDiscount" value="@Model.AfterDiscount" hidden /> @* hidden *@
+
+                
+                <input type="text" asp-for="Month_Y" value="@Model.Month_Y" hidden /> @* hidden *@
+                <input type="text" asp-for="Month_M" value="@Model.Month_M" hidden /> @* hidden *@
+                <input type="text" asp-for="CountBriefs" value="@Model.CountBriefs" hidden /> @* hidden *@
+                <input type="text" asp-for="Edit_Month" value="@Model.Edit_Month" hidden /> @* hidden *@
+
+
+
+
+            </div>
+            
+             
+            <div>
+                <div class="form-group col-md-12">
+                    <label asp-for="Monthly_M.MonthlyReceiptDate" class="control-label"></label>
+                    <input asp-for="Monthly_M.MonthlyReceiptDate" type="date" class="form-control" value="@Model.Month_Y-@Model.Month_M-@Model.Month_D" min="@Model.Month_Y-@Model.Month_M-01" max="@Model.Month_Y-@Model.Month_M-31" title="التاريخ يجب أن يكون بين @Model.Month_Y-@Model.Month_M-01 و @Model.Month_Y-@Model.Month_M-30" />
+                    
+
+                    <span asp-validation-for="Monthly_M.MonthlyReceiptDate" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group col-md-12">
+                    <label asp-for="Monthly_M.TransferAmount" class="control-label"></label>
+                    <input asp-for="Monthly_M.TransferAmount" class="form-control" />
+                    <span id="TransferAmountError" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label asp-for="Monthly_M.HandDeliveryAmount" class="control-label"></label>
+                    <input asp-for="Monthly_M.HandDeliveryAmount" class="form-control" />
+                    <span id="HandDeliveryAmountError" class="text-danger"></span>
+                </div>
+
+
+                @if(Model.monthlyTypeId == 1)
+                {
+                    <div class="form-group col-md-12">
+                        <br />
+                        <label class="control-label" style="font-size: 29px;font-family: -webkit-body;">ايام اليجازات  المدفوعه الاجر</label>
+                        <br />
+                        <label class="control-label">
+
+
+                            @if (Model.Briefs_L.Count() == 1)
+                            {
+
+                                <span style="unicode-bidi: embed; direction: rtl;font-weight: 600;font-family: monospace;    font-size: 18px;">   1   : يوم</span>
+
+                            }
+
+                            else if (Model.Briefs_L.Count() > 1)
+                            {
+                                <span style="unicode-bidi: embed; direction: rtl;font-weight: 600;font-family: monospace;    font-size: 18px;">   @Model.Briefs_L.Count()    : أيام</span>
+
+
+
+                            }
+                            else
+
+                            {
+
+                                <text> لا يوجد أيام إجازة</text>
+                            }
+
+
+                        </label>
+
+                    </div>
+                    <div class="form-group col-md-12">
+                        <br />
+                        <label class="control-label" style="font-size: 29px;font-family: -webkit-body;">ايام اليجازات الغير مدفوعة الاجر</label>
+                        <br />
+                        <label class="control-label">
+
+                            @if (Model.briefsPushStatus_L.Count() == 1)
+                            {
+
+                                <span style="unicode-bidi: embed; direction: rtl;font-weight: 600;font-family: monospace;    font-size: 18px;">   1   : يوم</span>
+
+                            }
+
+                            else if (Model.briefsPushStatus_L.Count() > 1)
+                            {
+                                <span style="unicode-bidi: embed; direction: rtl;font-weight: 600;font-family: monospace;    font-size: 18px;"> @Model.briefsPushStatus_L.Count() : أيام</span>
+
+
+
+                            }
+
+                            else
+
+                            {
+
+                                <text> لا يوجد أيام إجازة</text>
+                            }
+
+
+                        </label>
+
+                    </div>
+                }
+                <div class="form-group col-md-12">
+                    <br />
+                    <label asp-for="Monthly_M.NumberWorkingDays" class="control-label" style="font-size: 29px;font-family: -webkit-body;"></label>
+                    <br />
+                    <label class="control-label">
+                        @if (Model.driversDiary_L.Count() == 1)
+                        {
+
+                            <span style="unicode-bidi: embed; direction: rtl;font-weight: 600;font-family: monospace;    font-size: 18px;">   1   : يوم</span>
+
+                        }
+                       
+                        else if (Model.driversDiary_L.Count() > 1)
+                        {
+                            <span style="unicode-bidi: embed; direction: rtl;font-weight: 600;font-family: monospace;    font-size: 18px;">   @Model.driversDiary_L.Count()    : أيام</span>
+                            
+
+
+                        }
+                        else
+
+                        {
+
+                            <text> لا يوجد أيام عمل</text>
+                        }
+
+
+                    </label>
+
+                </div>
+
+
+
+                <div style="display:flex;align-items: flex-end;margin-top: 20px;height: 29vh;">
+                     
+                    <div>
+                        <h4>الشهريه المتفق عليه</h4>
+                        <h1 style="background: #ffffff;border: dashed 1px #22262d;border-radius: 23px;font-size: 82px;padding: 8px;color: #3f3737;min-width: 300px;align-content: center;">@Model.MonthlyAmount</h1>
+                        
+                        <h4>الشهريه بعد خصم الايجازات</h4>
+                        <h1 style="background: #fff;border: dashed 1px #22262d;border-radius: 10px;font-size: 50px;padding: 15px;color: #3f3737;min-width: 300px;">@Model.AfterDiscount</h1>
+
+                        
+                    </div>
+                     
+                   @if(Model.Edit_Month == true)
+                   {
+                        <div style="width:130px;height: 95px;margin-left: 13px;">
+                            <input type="submit" value="حفظ التعديل" class="btn btn-primary" style="width:130px;height:83px;" />
+                            
+                        </div >
+                        <div style="width:80px;height: 95px;margin-left: 13px;">
+                            <a href="~/Monthly/DeleteMonthly?IDMonthly=@Model.ID_Monthly" class="btn btn-danger" style="width:80px;height:83px; align-content:center">حذف</a>
+
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="width:200px;height: 95px;margin-left: 13px;">
+                            <input type="submit" value="دفع" class="btn btn-primary" style="width:200px;height:83px;" />
+
+                        </div>
+                    }
+                    
+                     
+                </div>
+                <h6 style="font-size:18px;display: flex;flex-direction: row; justify-content: flex-end;" class="text-danger">
+                    @Model.Error
+                </h6>
+                
+            </div>
+        </form>
+    </div>
+
+   
+    @if (Model.monthlyTypeId == 1)
+    {
+        <div style="border: 1px dashed;border-radius: 10px;width: 50%;margin: 1px">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>يوم عمل مدفع الجازه</th>
+                        <th>التاريخ</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Briefs_L)
+                    {
+                        <tr>
+                            <td>@item.VacationDate.ToString("dddd")</td>
+                            <td>@item.VacationDate.ToString("MM/dd")</td>
+
+
+
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div style="border: 1px dashed;border-radius: 10px; width: 50%;margin: 1px;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>يوم عمل غير مدفع الجازه</th>
+                        <th>التاريخ</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.briefsPushStatus_L)
+                    {
+                        <tr>
+                            <td>@item.VacationDate.ToString("dddd")</td>
+                            <td>@item.VacationDate.ToString("MM/dd")</td>
+
+
+
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        
+        
+    }
+
+    <div style="border: 1px dashed;border-radius: 10px; width: 50%;margin: 1px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>يوم عمل</th>
+                    <th>التاريخ</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.driversDiary_L)
+                {
+                    <tr>
+                        <td>@item.CreatedDate.ToString("dddd")</td>
+                        <td>@item.CreatedDate.ToString("MM/dd")</td>
+
+
+
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    //هذا الكود سقوم بفحص اذا احد الحقلين فارغ قبل حفظ البيانات
+    $(document).ready(function () {
+        $("form").submit(function (e) {
+            var transferAmount = $("#Monthly_M_TransferAmount").val();
+            var handDeliveryAmount = $("#Monthly_M_HandDeliveryAmount").val();
+            if ((!transferAmount || transferAmount == 0) && (!handDeliveryAmount || handDeliveryAmount == 0)) {
+                e.preventDefault();
+                var errorMessage = "يجب إدخال المبلغ المحول أو مبلغ التسليم باليد وأن يكون أكبر من الصفر";
+                $("#TransferAmountError").text(errorMessage);
+                $("#HandDeliveryAmountError").text(errorMessage);
+            } else {
+                $("#TransferAmountError").text('');
+                $("#HandDeliveryAmountError").text('');
+            }
+        });
+    });
+
+ 
+ وهذا الكود يقوم بفحص اذا كنت على الحقل وخرجت منه اذا كان احد الحقلين فيه بيانات سيمسح الرساله الخطاء
+    $(document).ready(function () {
+        $("#Monthly_M_TransferAmount, #Monthly_M_HandDeliveryAmount").change(function () {
+            var transferAmount = $("#Monthly_M_TransferAmount").val();
+            var handDeliveryAmount = $("#Monthly_M_HandDeliveryAmount").val();
+            if ((!transferAmount || transferAmount == 0) && (!handDeliveryAmount || handDeliveryAmount == 0)) {
+                var errorMessage = "يجب إدخال المبلغ المحول أو مبلغ التسليم باليد";
+                $("#TransferAmountError").text(errorMessage);
+                $("#HandDeliveryAmountError").text(errorMessage);
+            } else {
+                $("#TransferAmountError").text('');
+                $("#HandDeliveryAmountError").text('');
+            }
+        });
+    });
+    // $(document).ready(function () {
+    //     $("#Monthly_M_TransferAmount, #Monthly_M_HandDeliveryAmount").change(function () {
+    //         var transferAmount = parseFloat($("#Monthly_M_TransferAmount").val());
+    //         var handDeliveryAmount = parseFloat($("#Monthly_M_HandDeliveryAmount").val());
+
+    //         if ((transferAmount > 0 || handDeliveryAmount > 0) || (transferAmount > 0 && handDeliveryAmount === 0)) {
+    //             $("#TransferAmountError").text('');
+    //             $("#HandDeliveryAmountError").text('');
+    //         } else {
+    //             var errorMessage = "يجب إدخال المبلغ المحول أو مبلغ التسليم باليد";
+    //             $("#TransferAmountError").text(errorMessage);
+    //             $("#HandDeliveryAmountError").text(errorMessage);
+    //         }
+    //     });
+    // });
+
+
+</script>
+
+
+
+@section Scripts {
+    @{
+        //هذا مهم جدا لانه يقوم بفحص اذا البيانات فاغة ولا لا حسب الي موضع في الفيو اذا اخترنا ان يكون في بيانات
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

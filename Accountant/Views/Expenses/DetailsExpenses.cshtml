@@ -1,0 +1,176 @@
+﻿@model Accountant.Models.ViewModel.ViewModelExpenses
+<div style="display:flex">
+    <div class="col-md-3">
+
+         
+
+
+            <div >
+
+
+                <div class="form-group" style="margin:30px 30px 0px 0px">
+                <form asp-action="DetailsExpenses">
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <span asp-validation-for="Expenses_M.Messages" class="text-danger"></span>
+                        <span asp-validation-for="Expenses_M.Error" class="text-danger"></span>
+
+                        <div class="form-group">
+                            <input asp-for="Expenses_M.Id" class="form-control" hidden />
+                        </div>
+
+
+
+                        @if (Model.NameTypeCar != null)
+                        {
+                            <div class="form-group">
+                            <input asp-for="Expenses_M.TypeCar" class="form-control" value="@Model.NameTypeCar" hidden/>
+                            <span asp-validation-for="Expenses_M.TypeCar" class="text-danger"></span>
+                            </div>
+                            <input asp-for="AddToEdit" class="form-control" value="@Model.AddToEdit" hidden/>@*  ارجاع القيمه الي المتغيير من اجل احتفاض القيمه بعد التعديث  *@
+
+                        }
+                        else
+                        {
+
+                            <div class="form-group">
+                            <input asp-for="Expenses_M.TypeCar" class="form-control" />
+                            <span asp-validation-for="Expenses_M.TypeCar" class="text-danger"></span>
+                            </div>
+
+                        }
+
+
+                        <div class="form-group">
+                        <label asp-for="Expenses_M.NamePiece" class="control-label"></label>
+                        <input asp-for="Expenses_M.NamePiece" class="form-control" />
+                        <span asp-validation-for="Expenses_M.NamePiece" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Expenses_M.UnitPrice" class="control-label"></label>
+                            <input asp-for="Expenses_M.UnitPrice" class="form-control" />
+                            <span asp-validation-for="Expenses_M.UnitPrice" class="text-danger"></span>
+                         
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Expenses_M.NumberPieces" class="control-label"></label>
+                            <input asp-for="Expenses_M.NumberPieces" class="form-control" />
+                            <span asp-validation-for="Expenses_M.NumberPieces" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                        <label asp-for="Expenses_M.PartsId" class="control-label"></label>
+                        <select asp-for="Expenses_M.PartsId" class="form-control">
+                                <option value="">--اختر موقع الشراء--</option>
+                                @foreach (var item in Model.sparePartsCenters_List)
+                                {
+
+                                    <option value="@item.Id">@item.NameCenter</option>
+                                }
+                            </select>
+
+                        <span asp-validation-for="Expenses_M.PartsId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                        <label asp-for="Expenses_M.WorkshopsID" class="control-label"></label>
+                        <select asp-for="Expenses_M.WorkshopsID" class="form-control">
+                            <option value="">--اختر موقع الصيانه--</option>
+                            @foreach (var item in Model.Workshops_List)
+                            {
+
+                                <option value="@item.Id">@item.NameRepairShop</option>
+                            }
+                        </select>
+                        <span asp-validation-for="Expenses_M.WorkshopsID" class="text-danger"></span>
+                         </div>
+                        <div class="form-group">
+                        <label asp-for="Expenses_M.MaintenancePrice" class="control-label"></label>
+                        <input asp-for="Expenses_M.MaintenancePrice" class="form-control" />
+                        <span asp-validation-for="Expenses_M.MaintenancePrice" class="text-danger"></span>
+                        </div>
+
+                    
+
+                        <div class="form-group">
+                        <label asp-for="Expenses_M.Image" class="control-label"></label>
+                        <input asp-for="Expenses_M.Image" class="form-control" type="file" />
+                        <span asp-validation-for="Expenses_M.Image" class="text-danger"></span>
+                        </div>
+                    @if (Model.AddToEdit == false) 
+                    {
+                        <div class="form-group">
+                            <label asp-for="Expenses_M.DateExchange" class="control-label"></label>
+                            <input asp-for="Expenses_M.DateExchange" class="form-control" readonly value="@String.Format("{0:yyyy-MM-dd}",Model.StatusDate)" />
+                            <span asp-validation-for="Expenses_M.DateExchange" class="text-danger"></span>
+                        </div>
+                        }
+                        else
+                        {
+                            <div class="form-group">
+                                <label asp-for="Expenses_M.DateExchange" class="control-label"></label>
+                            <input asp-for="Expenses_M.DateExchange" class="form-control" type="date" value="@String.Format("{0:yyyy-MM-dd}",Model.StatusDate)" />
+                                <span asp-validation-for="Expenses_M.DateExchange" class="text-danger"></span>
+                            </div>
+                        }
+                     
+
+
+                        <div class="form-group" style="margin-top:10px">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+          
+         
+
+    </div>
+    <div class="col-md-9">
+         
+        <form asp-action="DetailsExpenses">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>اسم القطعة</th>
+                        <th>سعر القطعة</th>
+                        <th>عدد القطع</th>
+                        <th>موقع شراء القطع</th>
+                        <th>موقع  الصيانه</th>
+                        <th>تكلفة الصيانه</th>
+                        <th>التاريخ</th>
+                        <th>تعديل</th>
+                        <th>حذف</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Expenses)
+                    {
+                        <tr>
+                            <td>@item.NamePiece</td>@* اسم القطعة *@
+                            <td>@item.UnitPrice</td>@* سعر القطعة *@
+                            <td>@item.NumberPieces</td>@* عدد القطع *@
+                            <td>@item.sparePartsCenters?.NameCenter</td>@* موقع شراء القطعة *@
+                            <td>@item.repairWorkshops?.NameRepairShop</td>@* موقع الصيانه *@
+                            <td>@item.MaintenancePrice</td>@* تكلفة الصيانه *@
+                            <td>@item.DateExchange</td>@* التاريخ *@
+                            <th><a class="btn btn-primary" href="~/Expenses/DetailsExpenses?CarID=@item.CarId&AddNew=false&Edit=true&IDExchange=@item.Id&DateExchangeString=@item.DateExchange.ToString("yyyy-MM-dd")">تعديل</a></th>
+                            <th><a class="btn btn-primary" href="~/Expenses/DeleteExpenses?id=@item.Id&AddToEdit=@Model.AddToEdit">حذف</a></th>
+                            
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        //هذا مهم جدا لانه يقوم بفحص اذا البيانات فاغة ولا لا حسب الي موضع في الفيو اذا اخترنا ان يكون في بيانات
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+            }

@@ -1,0 +1,73 @@
+﻿ @model List<GeneralUser>
+
+<div>
+    <p class="text-danger">@ViewBag.Error</p>
+    <p class="text-danger">@ViewBag.briefs</p>
+    <p class="text-danger">@ViewBag.car</p>
+    <p class="text-danger">@ViewBag.carLicense</p>
+    <p class="text-danger">@ViewBag.carInsurance</p>
+    <p class="text-danger">@ViewBag.companyDebts</p>
+    <p class="text-danger">@ViewBag.companyObligations</p>
+    <p class="text-danger">@ViewBag.contracts</p>
+    <p class="text-danger">@ViewBag.customerDebts</p>
+    <p class="text-danger">@ViewBag.drivers</p>
+    <p class="text-danger">@ViewBag.expenses</p>
+    <p class="text-danger">@ViewBag.fuels</p>
+    <p class="text-danger">@ViewBag.monthly</p>
+    <p class="text-danger">@ViewBag.payments</p>
+    <p class="text-danger">@ViewBag.expenses</p>
+    <p class="text-danger">@ViewBag.repairWorkshops</p>
+    <p class="text-danger">@ViewBag.sparePartsCenters</p>
+    <p class="text-danger">@ViewBag.workCompanies</p>
+    <p class="text-danger">@ViewBag.workDiaries</p>
+
+</div>
+
+<a asp-action="ScreenAddGeneralUser" asp-controller="GeneralUser">
+    تسجيل زبون جديد
+</a>
+<table class="table">
+    
+    <thead>
+        <tr>
+            <th>اسم الزبون</th>
+            <th>تاريخ تسجيل المستخدم</th>
+         
+             
+            <th>الحاله</th>
+            <th>تعديل</th>
+            <th>حذف</th>
+            
+             
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.CreatedDate</td>
+                @if(item.Confirmed == true)
+                {
+                    <td>
+                        <a href="~/GeneralUser/EditConfirmedGeneralUser?ID=@item.ID">ايقاف</a>
+                    </td>
+                }else
+                {
+                    <td>
+                        <a href="~/GeneralUser/EditConfirmedGeneralUser?ID=@item.ID">تفعيل</a>
+                    </td>
+                }
+                    <td><a href="~/GeneralUser/EditGeneralUser?ID=@item.ID&UserID=@item.ID">تعديل</a></td>
+                <td><a href="~/GeneralUser/DeleteGeneralUser?ID=@item.ID">حذف</a></td>
+                
+                
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-action="Index" asp-controller="Home">Back to List</a>
+</div>
+ 

@@ -1,0 +1,56 @@
+﻿@model Contracts
+
+
+
+
+<a asp-action="ScreenAddContracts" asp-controller="Contracts">
+    تسجيل زبون جديد
+</a>
+ 
+@if (ViewBag.DataContract != null)
+{
+    // عرض البيانات
+ 
+<table class="table">
+    <thead>
+        <tr>
+            <th>اسم الشركة</th>
+            <th>عدد الساعات العمل</th>
+            <th>عدد الأيام العمل</th>
+            <th>سعر الساعة</th>
+            <th>موقع عمل</th>
+            <th>تاريخ انتهاء العقد</th>
+            <th>تعديل</th>
+            <th>خذف</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.DataContract)
+        {
+            <tr>
+                <td>@item.NameCompany</td>
+                <td>@item.NumberHours</td>
+                <td>@item.NumberDays</td>
+                <td>@item.WatchPrice</td>
+                <td>@item.CompanyWorkSite</td>
+                <td>@item.ContractExpiryDate</td>
+                <td><a class="btn btn-primary" href="~/Contracts/ScreenEditContracts?Contracts_Edit_ID=@item.Id">نعديل</a></td>
+
+                <td><a class="btn btn-primary" href="~/Contracts/ScreenDeleteContracts?Contracts_Delete_ID=@item.Id">خذف</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+    
+}
+<div>
+    <a asp-action="Index" asp-controller="Home">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

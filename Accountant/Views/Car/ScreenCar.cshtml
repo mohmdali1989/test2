@@ -1,0 +1,43 @@
+﻿@model List<Car>
+ 
+
+    <style>
+        .A
+        {
+            width:190px;
+            height:290px;
+            background:#123456;
+        text-align: center;
+        vertical-align: bottom;
+        border: 3px solid black;
+        border-radius:20px
+        }
+        .A h4{
+            width: 100%;
+            height: 85%;
+            display:flex;
+            justify-content:center;
+            align-items:flex-end;
+             
+            
+        }
+         
+    </style>
+ 
+<a asp-action="ScreenAddCar" asp-controller="Car" class="btn btn-primary">
+    اضافة مركبة جديده
+</a>
+    <div>
+        <table>
+        <thead>
+            <tr>
+                @foreach (var item in Model)
+                {
+                    <th><a class="btn btn-primary A" href="~/car/ScreenEditCar?ID=@item.Id"><h4>@item.NameCar</h4></a></th>
+                    @* https://localhost:7247/EUpdateEmail/GetEmaiEdit?ID= *@
+
+                }
+            </tr>
+        </thead>
+        </table>
+    </div>

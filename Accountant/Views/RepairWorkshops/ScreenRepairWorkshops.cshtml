@@ -1,0 +1,94 @@
+﻿@model RepairWorkshops
+<div style="display:flex">
+
+
+    <div class="form-group" style="margin:30px">
+        <form asp-action="ScreenRepairWorkshops">
+             
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <span asp-validation-for="Messages" class="text-danger"></span>
+            <span asp-validation-for="Error" class="text-danger"></span>
+
+            <div class="form-group">
+                <input asp-for="Id" class="form-control" hidden />
+            </div>
+            <div class="form-group">
+                <label asp-for="NameRepairShop" class="control-label"></label>
+                <input asp-for="NameRepairShop" class="form-control" />
+                <span asp-validation-for="NameRepairShop" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkshopLocation" class="control-label"></label>
+                <input asp-for="WorkshopLocation" class="form-control" />
+                <span asp-validation-for="WorkshopLocation" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="WorkshopSpecialty" class="control-label"></label>
+                <input asp-for="WorkshopSpecialty" class="form-control" />
+                <span asp-validation-for="WorkshopSpecialty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkingHours" class="control-label"></label>
+                <input asp-for="WorkingHours" class="form-control" />
+                <span asp-validation-for="WorkingHours" class="text-danger"></span>
+            </div>
+
+
+
+
+
+
+            <div class="form-group" style="margin-top:10px">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+
+    <div>
+        <form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>اسم ورشه التصليخ</th>
+                        <th>موقع الورشة</th>
+                        <th>التخصص الورشة</th>
+                        <th>مواعيد عمل الورشة</th>
+
+                        <th>تعديل</th>
+                        <th>خذف</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.repairWorkshops)
+                    {
+                        <tr>
+                            <td>@item.NameRepairShop</td>
+                            <td>@item.WorkshopLocation</td>
+                            <td>@item.WorkshopSpecialty</td>
+                            <td>@item.WorkingHours</td>
+
+
+
+                            <th><a class="btn btn-primary" href="~/RepairWorkshops/ScreenRepairWorkshops?RepairWorkshopsEdit_id=@item.Id&SpareParts_id=0">نعديل</a></th>
+
+                            <td><a class="btn btn-primary" href="~/RepairWorkshops/DeleteRepairWorkshops?id=@item.Id">خذف</a></td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </form>
+
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        //هذا مهم جدا لانه يقوم بفحص اذا البيانات فاغة ولا لا حسب الي موضع في الفيو اذا اخترنا ان يكون في بيانات
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+} 

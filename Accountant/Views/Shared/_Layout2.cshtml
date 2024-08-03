@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Accountant.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/LayoutCss/fremework.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/LayoutCss/LayoutCss.Css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/LayoutCss/CssHome.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/LayoutCss/max-width/MaxWidth.css" asp-append-version="true" />
+
+</head>
+
+
+<body>
+    <header>
+        <nav class="P-10">
+            <div class="Container">
+                <div class="d-Grid Grid-3 align-item-Center">
+                    <div class="Logo d-Flex align-item-Center">
+                        <div class="bar"></div>
+                        <a>
+
+                            <div class="DIV_VMA">
+                                <span class="VMA">
+                                    <span>T</span>ruck<b>Pal</b>
+                                    <p class="P-VMA">T.Pal</p>
+                                    <p class="P-VT">Vehicle transportation</p>
+                                </span>
+                            </div>
+
+                        </a>
+
+                    </div>
+                    <div class="search d-Flex justify-Content-center">
+                        <form action="">
+                            <input type="text" name="" id="" placeholder="Search for anything  6:45" />
+                            <span> <img src="~/img/img_Layout/search.png" alt="" /></span>
+                        </form>
+
+                    </div>
+                    <div class="user">
+                        <div class="d-Flex justify-Content-end align-item-Center">
+                            <div class="navt ">
+                                <a href=""><img src="~/img/img_Layout/Notices.png" /><span class="d-Flex align-item-Center justify-Content-center">2</span></a>
+                            </div>
+
+                            <div class="user_area ml-25">
+
+                                <a href="" data-menuTop="optionUser" class=" LinkDropMenuTop  d-Flex align-item-Center  ">
+                                    <figure><img src="~/img/img_Layout/OIP.jpeg" alt="" /></figure>
+                                    <span class="ml-5 name d-Flex align-item-Center"> Hi , Mohmad <i class="arrwDown ml-7"></i></span>
+
+                                </a>
+                                <ul id="optionUser" class="list-Unstyled dropDownTop P-0">
+                                    <li><a href="">profile</a></li>
+                                    <li><a href="">Setting</a></li>
+                                    <li><a href="">Logout</a></li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <div class="Content-dashbord">
+        <div class="Sidebar">
+            <div class="Container">
+                <div class="User-information Text-center">
+                    <figure class="User-img M-auto"><img class="width-107" src="~/img/R.jpeg" /></figure>
+                    <span class="justify-Content-center align-item-Center Num-n">2</span>
+                    
+                        <h5 class="mt-20">Michael D.Powell</h5>
+                        <p><small>Poker Master</small></p>
+                    
+                    
+
+                </div>
+                <span class="dividingLine"></span>
+                <div class="Menus">
+                    <ul class="list-Unstyled P-0">
+                        <li class="position-relative " title="اليوميات">
+                            <a class="d-Flex align-item-Center LinkDropSidebar " data-menu-Sidebar="sub-menu-WorkDiary" href="javascript:void(0)"  >
+                                <span class="mr-15">
+                                    <img class="width-30" src="~/img/img_Layout/img_box/icon34.png" />
+                                </span>
+                                يوميات
+                                @* <b><i class="d-Flex justify-Content-center align-item-Center">3</i></b> *@
+                            </a>
+                            <ul id="sub-menu-WorkDiary" class="list-Unstyled P-0 dropDownSidebar ">
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تسحيـــل يوميات العمل</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تســجـيــــــل الــوقـــود</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تـسجـيــل الـمصـاريـف</a></li>
+
+                            </ul>
+                        </li>
+                        @* ================================================== *@
+                        <li class="position-relative " title="اليوميات">
+                            <a class="d-Flex align-item-Center LinkDropSidebar " href="javascript:void(0)" data-menu-Sidebar="sub-menu-Car">
+                                <span class="mr-15">
+                                    <img class="width-30" src="~/img/img_Layout/img_box/icon35.png" />
+                                </span>
+                                المركبات
+                                @* <b><i class="d-Flex justify-Content-center align-item-Center">3</i></b> *@
+                            </a>
+                            <ul id="sub-menu-Car" class="list-Unstyled P-0 dropDownSidebar ">
+                                <li><a asp-area="" asp-controller="Car" asp-action="ScreenCar">تسحيـل مركبـــــات جـديده</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تسجيل ترخيص المركبات</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تسجيل تامــين المركبــات</a></li>
+
+                            </ul>
+
+                        </li>
+                        @* ================================================== *@
+                        <li class="position-relative " title="السائقين">
+                            <a class="d-Flex align-item-Center LinkDropSidebar" href="javascript:void(0)" data-menu-Sidebar="sub-menu-Drivers">
+                                <span class="mr-15">
+                                    <img class="width-30" src="~/img/img_Layout/img_box/icon37.png" />
+                                </span>
+                                السائقين
+                                @* <b><i class="d-Flex justify-Content-center align-item-Center">3</i></b> *@
+                            </a>
+                            <ul id="sub-menu-Drivers" class="list-Unstyled P-0 dropDownSidebar ">
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تسـجيــل سائــق جــديد</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تسجيل يوميـات السائق</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تسجيل شهريات السائق  </a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تسجيل ايجازات السائق</a></li>
+
+                            </ul>
+                        </li >
+                        @* ================================================== *@
+                        <li class="position-relative " title="المستخدمين">
+                            <a class="d-Flex align-item-Center LinkDropSidebar" href="javascript:void(0)" data-menu-Sidebar="sub-menu-User">
+                                <span class="mr-15">
+                                    <img class="width-30" src="~/img/img_Layout/img_box/icon36.png" />
+                                </span>
+                                المستخدمين
+                                @* <b><i class="d-Flex justify-Content-center align-item-Center">3</i></b> *@
+                            </a>
+                            <ul id="sub-menu-User" class="list-Unstyled P-0 dropDownSidebar ">
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تــسجيــل مستخــدم جديــد</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تسجيل صلاحيات مستخدم</a></li>
+
+                            </ul>
+                        </li>
+                        @* ================================================== *@
+                        <li class="position-relative " title="الوقود">
+                            <a class="d-Flex align-item-Center LinkDropSidebar" href="javascript:void(0)" data-menu-Sidebar="sub-menu-Fuel">
+                                <span class="mr-15">
+                                    <img class="width-30" src="~/img/img_Layout/img_box/icon44.png" />
+                                </span>
+                                الوقود
+                                @* <b><i class="d-Flex justify-Content-center align-item-Center">3</i></b> *@
+                            </a>
+                            <ul id="sub-menu-Fuel" class="list-Unstyled P-0 dropDownSidebar ">
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تسجيل مصادر الوقود</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تــسـجـيـــل الــوقــــود</a></li>
+
+                            </ul>
+                        </li>
+                        @* ================================================== *@
+
+                        <li class="position-relative " title="المراكز">
+                            <a class="d-Flex align-item-Center LinkDropSidebar" href="javascript:void(0)" data-menu-Sidebar="sub-menu-Centers">
+                                <span class="mr-15">
+                                    <img class="width-30" src="~/img/img_Layout/img_box/icon45.png" />
+                                </span>
+                                المراكز
+                                @* <b><i class="d-Flex justify-Content-center align-item-Center">3</i></b> *@
+                            </a>
+                            <ul id="sub-menu-Centers" class="list-Unstyled P-0 dropDownSidebar ">
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تــسجيـــل مـراكز قطع جـديـده</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تــسجــيـل ورشــــات جــديــده</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تسجيل ورشات كوشوك جديده</a></li>
+
+                            </ul>
+                        </li>
+                        @* ================================================== *@
+
+                        <li class="position-relative " title="الزبائن">
+                            <a class="d-Flex align-item-Center LinkDropSidebar" href="javascript:void(0)" data-menu-Sidebar="sub-menu-customers">
+                                <span class="mr-15">
+                                    <img class="width-30" src="~/img/img_Layout/img_box/icon46.png" />
+                                </span>
+                                الزبائن
+                                @* <b><i class="d-Flex justify-Content-center align-item-Center">3</i></b> *@
+                            </a>
+                            <ul id="sub-menu-customers" class="list-Unstyled P-0 dropDownSidebar ">
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تــسجيــل زبــون جـديــد</a></li>
+                                
+                            </ul>
+                        </li>
+                        @* ================================================== *@
+
+                        <li class="position-relative " title="التقارير">
+                            <a class="d-Flex align-item-Center LinkDropSidebar" href="javascript:void(0)" data-menu-Sidebar="sub-menu-Reports">
+                                <span class="mr-15">
+                                    <img class="width-30" src="~/img/img_Layout/img_box/icon47.png" />
+                                </span>
+                                التقارير
+                                @* <b><i class="d-Flex justify-Content-center align-item-Center">3</i></b> *@
+                            </a>
+                            <ul id="sub-menu-Reports" class="list-Unstyled P-0 dropDownSidebar ">
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تــقــاريــر الـمــركـبـات</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تقارير ايام عمل السائق</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تقارير شهريات السائق</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تقــارير صـرف الوقـود</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">تــقــاريــر الــزبــــائــن</a></li>
+                                 
+
+                            </ul>
+                        </li>
+                        @* ================================================== *@
+
+                        <li class="position-relative " title="الشركة">
+                            <a class="d-Flex align-item-Center LinkDropSidebar" href="javascript:void(0)" data-menu-Sidebar="sub-menu-company">
+                                <span class="mr-15">
+                                    <img class="width-30" src="~/img/img_Layout/img_box/icon48.png" />
+                                </span>
+                                الشركة
+                                @* <b><i class="d-Flex justify-Content-center align-item-Center">3</i></b> *@
+                              </a>
+                            <ul id="sub-menu-company" class="list-Unstyled P-0 dropDownSidebar ">
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">معلـــومــات الشــركــة</a></li>
+                               
+
+                            </ul>
+                        </li>   
+
+                        @* <li class="position-relative ">
+                            <a class="d-Flex align-item-Center LinkDrop" href="javascript:void(0)" data-menu="sub-menu-User1">
+                                <span class="mr-15">
+                                    <img class="width-30" src="~/img/img_Layout/img_box/icon35.png" />
+                                </span>
+                                الشركة
+                                  <b><i class="d-Flex justify-Content-center align-item-Center">3</i></b>  
+                            </a>
+                            <ul id="sub-menu-User1" class="list-Unstyled P-0 dropDown ">
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">Competitions</a></li>
+                                <li><a asp-area="" asp-controller="Login" asp-action="ScreenLogin">Pending</a></li>
+
+                            </ul>
+                        </li> *@
+                        @* ================================================== *@
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="Content-body">
+            <div>
+                @RenderBody()
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+<script src="~/js/Layout/LayoutJs.js"></script>

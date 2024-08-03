@@ -1,0 +1,405 @@
+﻿@using Newtonsoft.Json
+@inject IHttpContextAccessor HttpContextAccessor;
+<style>
+    .dropdown {
+        margin-top: 6px;
+        position: relative;
+        display: inline-block;
+        padding: 0px 0px 7px 0px;
+        margin: 7px 10px 0px 10px;
+        z-index: 1;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        padding: 12px 16px;
+        z-index: 1;
+        box-shadow: 0px 3px 3px 0px rgba(34,64,67,0.3);
+        margin-top: 7px;
+        background: #fff;
+        text-align: center;
+    }
+
+        .dropdown-content a, .dropdown > button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: black;
+            text-decoration: none;
+        }
+
+            .dropdown-content a:hover, .dropdown > button:hover {
+                color: red;
+            }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+   
+
+</style>
+<!DOCTYPE html>
+@{
+    var jsonPagesPermissions = Context.Session.GetString("PagesPermissions");
+    PagesPermissions? pagesPermissions = null;
+    if (jsonPagesPermissions != null)
+    {
+        pagesPermissions = JsonConvert.DeserializeObject<PagesPermissions>(jsonPagesPermissions);
+    }
+
+
+}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Accountant</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Accountant.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body style="background:#ffffff">
+    @*
+    <div style="display:flex ">
+        <!-- HTML structure for the sidebar -->
+         <div class="sidebar">
+            <!-- Circular image at the top -->
+            <div class="profile-image">
+                <img src="path-to-your-image.jpg" alt="Profile Image">
+            </div>
+
+            <!-- Username below the image -->
+            <div class="username">اسم المستخدم</div>
+
+            <!-- Thin line below the username -->
+            <hr>
+
+            <!-- Space and anchor buttons below the line -->
+            <div class="menu">
+                <a href="#home">الرئيسية</a>
+                <a href="#services">الخدمات</a>
+                <a href="#contact">اتصل بنا</a>
+                <!-- Add more buttons as needed -->
+            </div>
+        </div> *@
+
+
+    <div style="background: #f3f5fc;height: 100vh;width: 301px;position:fixed;bottom: 0;left: 0;">
+       
+            
+         <div>
+                    
+                      
+                        
+            <div style="    margin: 46px 0 63px 0;width: 100%;text-align: center;font-size: 22px;font-weight: 900;font-family: serif;color: grey;">
+                برنامج المقاولين
+            </div>
+
+                    
+
+                      
+             
+        </div>
+        <style>
+            .menu {
+                width:100%;
+                margin-top:30px
+            }
+
+            .menu .item {
+            position:relative;
+            cursor:pointer
+            }
+
+            .menu .item a{
+                color:#543;
+                font-size:16px;
+                text-decoration:none;
+                display:block;
+                padding:5px 30px;
+                line-height:60px
+
+            }
+             .item i{
+                margin-right:15px
+            }
+            .item a .dropdown{
+                position:absolute;
+                right:0;
+                margin:20px;
+                transition: 0.3s ease;
+                /* هاض عشان السهم الصغير */
+            }
+
+            .item .sub-menu {
+                background:#262627;
+                display:none;
+
+            }
+        </style>
+        <div class="menu">
+            <div class="item"><a href="#"><i class="fas fa-desktop"></i>تسجيلات </a></div>
+            <div class="item"><a href="#"><i class="fas fa-table"></i> اليوميات
+                <i  class="fas fa-angle-right dropdown"></i>
+            
+            </a>
+            <div class="sub-menu">
+                    <a href="#" class="sub-menu1"> التقارير</a>
+                    <a href="#" class="sub-menu2"> تسجيلات المراكز</a>
+                    <a href="#" class="sub-menu3"> تسحيلا المصادر</a>
+                  
+            </div>
+            </div>
+            <div class="item"><a href="#"><i class="fas fa-th"></i> التقارير</a></div>
+            <div class="item"><a href="#"><i class="fas fa-cog"></i>تسجيلات المراكز</a></div>
+            <div class="item"><a href="#"><i class="fas fa-info-circle"> </i>تسحيلا المصادر</a></div>
+
+        </div>
+             
+       
+    </div>
+
+
+    <div style="margin:21px 30px 0px 336px;display:flex;    justify-content: space-between ; ">
+        <div style="align-content:center">
+              <h3>Mohmad Ali</h3>
+          </div>
+          <div>
+            <img style="border-right:10px; background:red;        width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    object-fit: cover;" src="~/img/R.jpeg" />
+          </div>
+        </div>
+        <div style="margin:21px 30px 0px 336px;">
+            @RenderBody()
+        </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        const mainButton = document.getElementById("main-button");
+        const otherButtons = document.getElementsByClassName("other-buttons");
+
+        mainButton.addEventListener("click", () => {
+            for (const button of otherButtons) {
+                button.style.display = "block";
+            }
+        });
+
+    </script>
+
+</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+ <section class="main">
+     <h1>Sidebar Menu With<br>Sub-Menus</h1>
+   </section>
+
+   <script type="text/javascript">
+   $(document).ready(function(){
+     //jquery for toggle sub menus
+     $('.sub-btn').click(function(){
+       $(this).next('.sub-menu').slideToggle();
+       $(this).find('.dropdown').toggleClass('rotate');
+     });
+
+     //jquery for expand and collapse the sidebar
+     $('.menu-btn').click(function(){
+       $('.side-bar').addClass('active');
+       $('.menu-btn').css("visibility", "hidden");
+     });
+
+     $('.close-btn').click(function(){
+       $('.side-bar').removeClass('active');
+       $('.menu-btn').css("visibility", "visible");
+     });
+   });
+   </script>
+
+     
+
+
+
+
+
+    @*=====================================================================================================================================================================*@
+ 
+
+
+
+
+
+
+
+
+
+
+
+    @*==========================================================================================================================================================================*@
+    @*
+                     @if (pagesPermissions?.GeneralUser == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="GeneralUser" asp-action="ScreenGeneralUser">تسجيل مستحدم جديد</a>
+
+                    }
+                    @if (pagesPermissions?.Company == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Company" asp-action="ScreenEditCompany">الشركة</a>
+
+                    }
+                    @if (pagesPermissions?.Driver == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Driver" asp-action="ScreenDriver">الشوفرية</a>
+
+                    }
+                    @if (pagesPermissions?.WorkCompanies == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="WorkCompanies" asp-action="ScreenWorkComp">المقاولين</a>
+
+                    }
+                    @if (pagesPermissions?.WorkDiary == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="WorkDiary" asp-action="ScreenWorkDiary">يوميات العمل</a>
+
+                    }
+                    @if (pagesPermissions?.Fuel == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Fuel" asp-action="ScreenFuel">تسجيل السولر</a>
+
+                    }
+                    @if (pagesPermissions?.FuelProvider == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="FuelProvider" asp-action="ScreenFuelProvider">تسجيل مصدر السولر</a>
+
+                    }
+                    @if (pagesPermissions?.SparePartsCenters == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="SparePartsCenters" asp-action="ScreenSparePartsCenters">مركز قطع صيانه</a>
+
+
+                    }
+                    @if (pagesPermissions?.RepairWorkshops == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="RepairWorkshops" asp-action="ScreenRepairWorkshops">ورشات العمل</a>
+
+                    }
+                    @if (pagesPermissions?.Car == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Car" asp-action="ScreenCar">السيارات</a>
+
+                    }
+                    @if (pagesPermissions?.Expenses == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Expenses" asp-action="ScreenExpenses">المصاريف</a>
+
+                    }
+                    @if (pagesPermissions?.DriversDiary == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="DriversDiary" asp-action="ScreenDriversDiary">تيجبل ايام السائقين</a>
+
+                    }
+                    @if (pagesPermissions?.Briefs == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Briefs" asp-action="ScreenBriefs">تيجبل الاجازات</a>
+
+                    }
+                    @if (pagesPermissions?.Monthly == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Monthly" asp-action="ScreenCalendarMonthly">تسجيل شهريات</a>
+
+
+                    }
+                    @if (pagesPermissions?.InputCompany == true || pagesPermissions?.TrafficViolations == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <div class="dropdown">
+                                <button>الزر الرئيسي</button>
+                                <div class="dropdown-content">
+                                    @if (pagesPermissions?.InputCompany == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                                    {
+                                        <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="InputCompany" asp-action="ScereenInputCompany">مدخلات للشركة</a>
+
+                                    }
+                                    @if (pagesPermissions?.TrafficViolations == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                                    {
+                                        <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="TrafficViolations" asp-action="ScreenTrafficViolations">تسجيل مخالفات</a>
+
+                                    }
+
+                                </div>
+                            </div>
+
+
+
+                    }
+
+                    @if (pagesPermissions?.ReportscCar == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                    {
+
+                            <div class="dropdown">
+                                <button>التقارير</button>
+                                <div class="dropdown-content">
+                                    <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="ReportscCar" asp-action="ScreenReportscCar">تقارير السيارات</a>
+                                </div>
+                            </div>
+
+
+                    }
+                </div>
+                <div>
+                    @if (!string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("NameProgramUser")))
+                    {
+
+
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Exst"> ProgramUser تسجيل خروج من </a>
+
+                    }
+                    else if (!string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("NameMainUser")))
+                    {
+
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Exst"> MainUser  تسجيل خروج من</a>
+
+                    }
+                    else if (!string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("NameGeneralUser")))
+                    {
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Exst"> GeneralUser تسجيل خروج من</a>
+
+                    }
+                    else
+                    {
+
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="ScreenLogin">تسجيل دخول</a>
+
+                    }
+
+    *@

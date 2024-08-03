@@ -1,0 +1,765 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Accountant.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Accountant.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\css\\CssLnputCompany\\cssInputCompany.css",
+      "PackagePath": "staticwebassets\\css\\CssLnputCompany\\cssInputCompany.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\css\\LayoutCss\\CssHome.css",
+      "PackagePath": "staticwebassets\\css\\LayoutCss\\CssHome.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\css\\LayoutCss\\LayoutCss.Css",
+      "PackagePath": "staticwebassets\\css\\LayoutCss\\LayoutCss.Css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\css\\LayoutCss\\fremework.css",
+      "PackagePath": "staticwebassets\\css\\LayoutCss\\fremework.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\css\\LayoutCss\\max-width\\MaxWidth.css",
+      "PackagePath": "staticwebassets\\css\\LayoutCss\\max-width\\MaxWidth.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\css\\TrafficViolations\\TrafficViolations.css",
+      "PackagePath": "staticwebassets\\css\\TrafficViolations\\TrafficViolations.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\R.jpeg",
+      "PackagePath": "staticwebassets\\img\\R.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\_69966955-ffdb-46ce-a4ae-e879d002664a.jpg",
+      "PackagePath": "staticwebassets\\img\\_69966955-ffdb-46ce-a4ae-e879d002664a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\_baf5aa78-25e7-43c2-b643-7f3d26367d4f.jpg",
+      "PackagePath": "staticwebassets\\img\\_baf5aa78-25e7-43c2-b643-7f3d26367d4f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\LOGO.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\LOGO.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\Notices.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\Notices.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\OIP.jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\OIP.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\bar.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\bar.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\bizum.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\bizum.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\icons.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\icons.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img1.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img1.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img2.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img2.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img3.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img3.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP (1).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP (10).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP (10).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP (11).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP (11).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP (12).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP (12).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP (2).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP (2).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP (3).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP (3).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP (4).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP (4).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP (5).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP (5).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP (6).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP (6).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP (7).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP (7).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP (8).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP (8).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP (9).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP (9).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP(13).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP(13).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP(14).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP(14).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP(15).jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP(15).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\OIP.jpeg",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\OIP.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon1.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon1.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon10.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon10.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon11.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon11.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon12.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon12.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon13.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon13.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon14.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon14.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon15.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon15.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon16.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon16.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon17.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon17.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon18.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon18.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon19.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon19.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon2.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon2.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon20.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon20.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon21.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon21.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon22.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon22.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon23.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon23.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon24.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon24.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon25.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon25.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon26.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon26.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon27.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon27.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon28.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon28.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon29.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon29.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon3.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon3.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon30.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon30.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon31.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon31.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon32.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon32.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon33.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon33.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon34.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon34.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon35.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon35.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon36.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon36.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon37.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon37.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon38.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon38.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon39.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon39.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon4.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon4.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon40.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon40.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon41.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon41.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon42.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon42.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon43.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon43.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon44.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon44.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon45.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon45.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon46.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon46.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon47.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon47.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon48.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon48.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon5.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon5.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon6.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon6.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon7.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon7.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon8.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon8.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\icon9.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\icon9.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\maintenance.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\maintenance.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\maintenance1.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\maintenance1.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\maintenance2.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\maintenance2.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing10.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing10.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing11.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing11.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing12.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing12.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing13.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing13.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing14.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing14.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing15.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing15.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing16.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing16.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing17.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing17.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing18.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing18.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing19.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing19.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing2.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing2.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing20.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing20.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing21.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing21.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing22.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing22.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing23.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing23.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing24.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing24.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing25.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing25.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing26.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing26.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing27.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing27.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing28.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing28.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing29.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing29.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing3.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing3.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing4.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing4.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing5.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing5.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing6.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing6.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing7.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing7.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing8.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing8.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_box\\pngwing9.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_box\\pngwing9.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_sidebar\\calendar.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_sidebar\\calendar.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_sidebar\\console.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_sidebar\\console.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_sidebar\\money-bag.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_sidebar\\money-bag.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_sidebar\\play.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_sidebar\\play.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_sidebar\\potion.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_sidebar\\potion.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_sidebar\\speedometer.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_sidebar\\speedometer.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\img_sidebar\\trophy.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\img_sidebar\\trophy.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\rectangle.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\rectangle.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\img\\img_Layout\\search.png",
+      "PackagePath": "staticwebassets\\img\\img_Layout\\search.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\js\\GeneralUser.js",
+      "PackagePath": "staticwebassets\\js\\GeneralUser.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\js\\Layout\\LayoutJs.js",
+      "PackagePath": "staticwebassets\\js\\Layout\\LayoutJs.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\نسخه جديده\\Accountant\\Accountant\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Accountant.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Accountant.props",
+      "PackagePath": "build\\Accountant.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Accountant.props",
+      "PackagePath": "buildMultiTargeting\\Accountant.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Accountant.props",
+      "PackagePath": "buildTransitive\\Accountant.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

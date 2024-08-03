@@ -1,0 +1,64 @@
+﻿@model Accountant.Models.ViewModel.ViewModelWorkCompanies
+
+@if(Model.permissionsWorkCompanies?.Add == true || Model.IDMainUser>0 || Model.IDProgramUser>0)
+{
+    <a asp-action="ScreenAddWorkComp" asp-controller="WorkCompanies" class="btn btn-success">
+        تسجيل زبون جديد
+    </a>
+}
+else
+{
+    <a class="btn btn-success disabled">تسجيل زبون جديد</a>
+}
+ 
+<h1>@Model.IDProgramUser  IDProgramUser</h1>
+<h1>@Model.IDMainUser  IDMainUser</h1>
+<h1>@Model.id IDCompany</h1>
+<h1>@Model.IDGeneralUser IDGeneralUser</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>الاسم السائق</th>
+            <th>رقم الهاتف</th>
+            <th>عدد الساعات الافتراضية</th>
+            <th>عدد الأيام الافتراضية</th>
+            <th>تعديل</th>
+            <th>خذف</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.workCompanies)
+        {
+            <tr>
+                <td>@item.CompanyName</td>
+                <td>@item.phoneNumber</td>
+                <td>@item.NumberVirtualHours</td>
+                <td>@item.DefaultNumberDays</td>
+                @if (Model.permissionsWorkCompanies?.Edit == true || Model.IDMainUser > 0 || Model.IDProgramUser > 0)
+                {
+                    <td><a   class="btn btn-primary" href="~/WorkCompanies/ScreenEditWorkComp?WorkComp_Edit_ID=@item.Id">نعديل</a></td>
+
+                }
+                else
+                {
+                    <td><a class="btn btn-primary disabled" onclick="return false;" href="#"> نعديل</a></td>
+                }
+                @if (Model.permissionsWorkCompanies?.Delete == true || Model.IDMainUser > 0 || Model.IDProgramUser > 0)
+                {
+                    <td><a class="btn btn-primary" href="~/WorkCompanies/DeleteWorkComp?WorkComp_Delete_ID=@item.Id">خذف</a></td>
+                }
+                else
+                {
+                    <td><a class="btn btn-primary disabled" onclick="return false;"  >خذف</a></td>
+                }
+                 
+
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-action="Index" asp-controller="Home">Back to List</a>
+</div>
+

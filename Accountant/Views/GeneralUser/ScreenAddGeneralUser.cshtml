@@ -1,0 +1,576 @@
+﻿@model Accountant.Models.GeneralUser
+
+@{
+    ViewData["Title"] = "AddGeneralUser";
+}
+
+<h1>ScreenAddGeneralUser</h1>
+
+<h4>AddGeneralUser</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="ScreenAddGeneralUser">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+             
+            <div class="form-group">
+                <label asp-for="ConfirmedPaswword" class="control-label"></label>
+                <input asp-for="ConfirmedPaswword" class="form-control" />
+                <span asp-validation-for="ConfirmedPaswword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+             <div style="display:flex; margin:15px" class="form-group">
+
+                @* ====================================================== *@
+
+                <div class="form-group form-check" style="margin:10px">
+                    <label class="form-check-label">
+                        <input class="form-check-input" id="MainUserAlii" asp-for="Validity" type="radio" value="مسؤول" />
+                        مسؤول
+                    </label>
+                </div>
+                @* ====================================================== *@
+
+                <div class="form-group form-check" style="margin:10px">
+                    <label class="form-check-label">
+                        <input class="form-check-input" id="MainUser" asp-for="Validity" type="radio" value="مسؤول جزئي" />
+                        مسؤول جزئي
+                    </label>
+                </div>
+                @* ====================================================== *@
+
+                <div class="form-group form-check" style="margin:10px">
+                    <label class="form-check-label">
+                        <input class="form-check-input" id="User" asp-for="Validity" type="radio" value="option1" />
+                        مستخدم
+                    </label>
+                </div>
+
+                @* ====================================================== *@
+
+            </div>
+          
+             
+             
+            
+
+            <div style="display:flex; flex-wrap:wrap; align-items:flex-start" class="form-group">
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    <h4>اليجازات</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+
+                            <input class="form-check-input" asp-for="Briefs"  /> @Html.DisplayNameFor(model => model.Briefs)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="BriefsAdd"  /> @Html.DisplayNameFor(model => model.BriefsAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="BriefsEdit" /> @Html.DisplayNameFor(model => model.BriefsEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="BriefsDelete"  /> @Html.DisplayNameFor(model => model.BriefsDelete)
+                        </label>
+                    </div>
+
+                 </div>
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                   
+
+                     
+                    <h4>السيارات</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Car" /> @Html.DisplayNameFor(model => model.Car)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="CarAdd" /> @Html.DisplayNameFor(model => model.CarAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="CarEdit" /> @Html.DisplayNameFor(model => model.CarEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="CarDelete" /> @Html.DisplayNameFor(model => model.CarDelete)
+                        </label>
+                    </div>
+
+                </div>
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                     
+                        <h4>تامين السيارت</h4>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="CarInsurance" /> @Html.DisplayNameFor(model => model.CarInsurance)
+                            </label>
+                        </div>
+
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="CarInsuranceAdd" /> @Html.DisplayNameFor(model => model.CarInsuranceAdd)
+                            </label>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="CarInsuranceEdit" /> @Html.DisplayNameFor(model => model.CarInsuranceEdit)
+                            </label>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="CarInsuranceDelete" /> @Html.DisplayNameFor(model => model.CarInsuranceDelete)
+                            </label>
+                        </div>
+                     
+                    
+
+                </div>
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    
+                        <h4>ترخيص اليسارات</h4>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="CarLicense" /> @Html.DisplayNameFor(model => model.CarLicense)
+                            </label>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="CarLicenseAdd" /> @Html.DisplayNameFor(model => model.CarLicenseAdd)
+                            </label>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="CarLicenseEdit" /> @Html.DisplayNameFor(model => model.CarLicenseEdit)
+                            </label>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="CarLicenseDelete" /> @Html.DisplayNameFor(model => model.CarLicenseDelete)
+                            </label>
+                        </div>
+                    
+
+                </div>
+
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    <h4>السائقين</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Driver" /> @Html.DisplayNameFor(model => model.Driver)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="DriverAdd" /> @Html.DisplayNameFor(model => model.DriverAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="DriverEdit" /> @Html.DisplayNameFor(model => model.DriverEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="DriverDelete" /> @Html.DisplayNameFor(model => model.DriverDelete)
+                        </label>
+                    </div>
+
+                </div>
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    <h4>المصاريف</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Expenses" /> @Html.DisplayNameFor(model => model.Expenses)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="ExpensesAdd" /> @Html.DisplayNameFor(model => model.ExpensesAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="ExpensesEdit" /> @Html.DisplayNameFor(model => model.ExpensesEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="ExpensesDelete" /> @Html.DisplayNameFor(model => model.ExpensesDelete)
+                        </label>
+                    </div>
+
+                </div>
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    <h4>الوقود</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Fuel" /> @Html.DisplayNameFor(model => model.Fuel)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="FuelAdd" /> @Html.DisplayNameFor(model => model.FuelAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="FuelEdit" /> @Html.DisplayNameFor(model => model.FuelEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="FuelDelete" /> @Html.DisplayNameFor(model => model.FuelDelete)
+                        </label>
+                    </div>
+
+                </div>
+
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    <h4>المذكرة</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Memo" /> @Html.DisplayNameFor(model => model.Memo)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="MemoAdd" /> @Html.DisplayNameFor(model => model.MemoAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="MemoEdit" /> @Html.DisplayNameFor(model => model.MemoEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="MemoDelete" /> @Html.DisplayNameFor(model => model.MemoDelete)
+                        </label>
+                    </div>
+
+                </div>
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    <h4>الشهريات</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Monthly" /> @Html.DisplayNameFor(model => model.Monthly)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="MonthlyAdd" /> @Html.DisplayNameFor(model => model.MonthlyAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="MonthlyEdit" /> @Html.DisplayNameFor(model => model.MonthlyEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="MonthlyDelete" /> @Html.DisplayNameFor(model => model.MonthlyDelete)
+                        </label>
+                    </div>
+
+                </div>
+                @* ====================================================== *@
+                
+                
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    <h4>ورشات التصليح</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="RepairWorkshops" /> @Html.DisplayNameFor(model => model.RepairWorkshops)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="RepairWorkshopsAdd" /> @Html.DisplayNameFor(model => model.RepairWorkshopsAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="RepairWorkshopsEdit" /> @Html.DisplayNameFor(model => model.RepairWorkshopsEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="RepairWorkshopsDelete" /> @Html.DisplayNameFor(model => model.RepairWorkshopsDelete)
+                        </label>
+                    </div>
+
+                </div>
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    <h4>مراكز الغيار</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="SparePartsCenters" /> @Html.DisplayNameFor(model => model.SparePartsCenters)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="SparePartsCentersAdd" /> @Html.DisplayNameFor(model => model.SparePartsCentersAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="SparePartsCentersEdit" /> @Html.DisplayNameFor(model => model.SparePartsCentersEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="SparePartsCentersDelete" /> @Html.DisplayNameFor(model => model.SparePartsCentersDelete)
+                        </label>
+                    </div>
+
+                </div>
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    <h4>شركات العمل</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="WorkCompanies" /> @Html.DisplayNameFor(model => model.WorkCompanies)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="WorkCompaniesAdd" /> @Html.DisplayNameFor(model => model.WorkCompaniesAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="WorkCompaniesEdit" /> @Html.DisplayNameFor(model => model.WorkCompaniesEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="WorkCompaniesDelete" /> @Html.DisplayNameFor(model => model.WorkCompaniesDelete)
+                        </label>
+                    </div>
+
+                </div>
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    <h4>يوميات العمل</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="WorkDiary" /> @Html.DisplayNameFor(model => model.WorkDiary)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="WorkDiaryAdd" /> @Html.DisplayNameFor(model => model.WorkDiaryAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="WorkDiaryEdit" /> @Html.DisplayNameFor(model => model.WorkDiaryEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="WorkDiaryDelete" /> @Html.DisplayNameFor(model => model.WorkDiaryDelete)
+                        </label>
+                    </div>
+
+                </div>
+
+                @* ====================================================== *@
+
+                 <div style="margin:20px">
+                    <h4>يوميات السائقين</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="DriversDiary" /> @Html.DisplayNameFor(model => model.DriversDiary)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="DriversDiaryAdd" /> @Html.DisplayNameFor(model => model.DriversDiaryAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="DriversDiaryEdit" /> @Html.DisplayNameFor(model => model.DriversDiaryEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="DriversDiaryDelete" /> @Html.DisplayNameFor(model => model.DriversDiaryDelete)
+                        </label>
+                    </div>
+
+                </div>
+                @* ====================================================== *@
+
+                 <div style="margin:20px">
+                    <h4>مزود الوقود</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="FuelProvider" /> @Html.DisplayNameFor(model => model.FuelProvider)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="FuelProviderAdd" /> @Html.DisplayNameFor(model => model.FuelProviderAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="FuelProviderEdit" /> @Html.DisplayNameFor(model => model.FuelProviderEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="FuelProviderDelete" /> @Html.DisplayNameFor(model => model.FuelProviderDelete)
+                        </label>
+                    </div>
+
+                </div>
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    <h4>مدخلات الشركة</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="InputCompany" /> @Html.DisplayNameFor(model => model.InputCompany)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="InputCompanyAdd" /> @Html.DisplayNameFor(model => model.InputCompanyAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="InputCompanyEdit" /> @Html.DisplayNameFor(model => model.InputCompanyEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="InputCompanyDelete" /> @Html.DisplayNameFor(model => model.InputCompanyDelete)
+                        </label>
+                    </div>
+
+                </div>
+                @* ====================================================== *@
+
+                <div style="margin:20px">
+                    <h4>التقارير</h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="ReportscCar" /> @Html.DisplayNameFor(model => model.ReportscCar)
+                        </label>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="ReportscCarAdd" /> @Html.DisplayNameFor(model => model.ReportscCarAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="ReportscCarEdit" /> @Html.DisplayNameFor(model => model.ReportscCarEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="ReportscCarDelete" /> @Html.DisplayNameFor(model => model.ReportscCarDelete)
+                        </label>
+                    </div>
+                </div>
+                @* ====================================================== *@
+                <div style="margin:20px">
+                    <h4>مخالفات </h4>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="TrafficViolations" /> @Html.DisplayNameFor(model => model.TrafficViolations)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="TrafficViolationsAdd" /> @Html.DisplayNameFor(model => model.TrafficViolationsAdd)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="TrafficViolationsEdit" /> @Html.DisplayNameFor(model => model.TrafficViolationsEdit)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="TrafficViolationsDelete" /> @Html.DisplayNameFor(model => model.TrafficViolationsDelete)
+                        </label>
+                    </div>
+
+                </div>
+                @* ====================================================== *@
+            </div>
+            
+
+             
+
+        </form>
+    </div>
+</div>
+
+ 
+ 
+<div>
+    <a asp-action="ScreenGeneralUser">Back to List</a>
+</div>
+<script src="~/js/GeneralUser.js" asp-append-version="true"></script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+@* <div class="form-group form-check">
+    <label class="form-check-label">
+        <input class="form-check-input" asp-for="Briefs" /> @Html.DisplayNameFor(model => model.Briefs)
+    </label>
+</div> *@

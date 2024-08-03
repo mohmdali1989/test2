@@ -1,0 +1,94 @@
+﻿@model SparePartsCenters
+<div style="display:flex">
+
+
+    <div class="form-group" style="margin:30px">
+        <form asp-action="ScreenSparePartsCenters">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <span asp-validation-for="Messages" class="text-danger"></span>
+            <span asp-validation-for="Error" class="text-danger"></span>
+
+            <div class="form-group">
+                <input asp-for="Id" class="form-control" hidden />
+            </div>
+            <div class="form-group">
+                <label asp-for="NameCenter" class="control-label"></label>
+                <input asp-for="NameCenter" class="form-control"  />
+                <span asp-validation-for="NameCenter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CentrLocation" class="control-label"></label>
+                <input asp-for="CentrLocation" class="form-control" />
+                <span asp-validation-for="CentrLocation" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CenterSpecialty" class="control-label"></label>
+                <input asp-for="CenterSpecialty" class="form-control" />
+                <span asp-validation-for="CenterSpecialty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CenterWorkingHours" class="control-label"></label>
+                <input asp-for="CenterWorkingHours" class="form-control" />
+                <span asp-validation-for="CenterWorkingHours" class="text-danger"></span>
+            </div>
+             
+
+
+            
+
+
+            <div class="form-group" style="margin-top:10px">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+
+    <div>
+        <form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>اسم المركز</th>
+                        <th>موقع المركز</th>
+                        <th>مركز التخصص</th>
+                        <th>مواعيد عمل المركز</th>
+                         
+                        <th>تعديل</th>
+                        <th>خذف</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.sparePartsCenters)
+                    {
+                        <tr>
+                            <td>@item.NameCenter</td>
+                            <td>@item.CentrLocation</td>
+                            <td>@item.CenterSpecialty</td>
+                            <td>@item.CenterWorkingHours</td>
+
+
+
+                            <th><a class="btn btn-primary" href="~/SparePartsCenters/ScreenSparePartsCenters?SparePartsEdit_id=@item.Id&SpareParts_id=0">نعديل</a></th>
+
+                            <td><a class="btn btn-primary" href="~/SparePartsCenters/DeleteparePartsCenters?id=@item.Id">خذف</a></td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </form>
+
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        //هذا مهم جدا لانه يقوم بفحص اذا البيانات فاغة ولا لا حسب الي موضع في الفيو اذا اخترنا ان يكون في بيانات
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+} 

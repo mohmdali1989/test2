@@ -1,0 +1,404 @@
+﻿@model Accountant.Models.ViewModel.ReportscVM.ReportscCarViewModel
+  
+<div style="padding:10px;text-align:center;border-top: 1px dashed ;border-left:1px dashed;border-right:1px dashed;border-top-left-radius: 20px; border-top-right-radius:20px;margin-top:3px">
+    <h4>يوميات العمل</h4>
+</div>
+
+<div style="border: 1px dashed;border-bottom-left-radius: 20px; border-bottom-right-radius:20px;">
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th style="text-align: center;">موقع النقل</th>
+                <th style="text-align: center;">موقع التسليم</th>
+                <th style="text-align: center;">نوع الحمولة</th>
+                <th style="text-align: center;">سعر النقل</th>
+                <th style="text-align: center;">عدد الحمولة</th>
+                <th style="text-align: center;">مجموع  السعر</th>
+                <th style="text-align: center;">نوع الدفع</th>
+                <th style="text-align: center;">التاريخ</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.WorkDiary)
+            {
+                <tr>
+                    <td style="text-align: center">@item.TransportationLocation</td>
+                    <td style="text-align: center">@item.DeliveryLocation</td>
+                    <td style="text-align: center;">@item.LoadType</td>
+                    <td style="text-align: center;">@item.TransportationPrice₪</td>
+                    <td style="text-align: center;">@item.NumberLoad</td>
+                    <td style="text-align: center;">@(item.TransportationPrice * item.NumberLoad)₪</td>
+                    <td style="text-align: center;">@item.PaymentType</td>
+                    <td style="text-align: center;">@item.CreatedDateOnly</td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+    <table class="table">
+        <tbody>
+            <tr >
+                <td class="border-bottom-0" style="text-align: center; width: auto; text-align:right;padding-right: 37px;">
+                    @{
+                        var TotalePrice = 0;
+                        foreach (var Total in Model.WorkDiary)
+                        {
+                            TotalePrice += Total.TransportationPrice *Total.NumberLoad;
+                        }
+                    }
+                    <h6>@TotalePrice</h6>
+                </td>
+                <td class ="border-bottom-0 " style="text-align: center; width:120px">
+                    <h6>مجموع الاسعار</h6>
+                </td>
+                <td class="border-bottom-0 " style="text-align: center; width:100px">
+                    @{
+                        var TotaleNumberLoad = 0;
+                        foreach (var Total in Model.WorkDiary)
+                        {
+                            TotaleNumberLoad += Total.NumberLoad;
+                        }
+                    }
+                    <h6>@TotaleNumberLoad</h6>
+                </td>
+                <td class="border-bottom-0 " style="text-align: center; width:120px;margin-right:20px">
+                    <h6>مجموع الحموله</h6>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
+
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+<div style="padding:10px;text-align:center;border-top: 1px dashed ;border-left:1px dashed;border-right:1px dashed;border-top-left-radius: 20px; border-top-right-radius:20px;margin-top:3px">
+    <h4>الوقود</h4>
+</div>
+
+<div style="border: 1px dashed;border-bottom-left-radius: 20px; border-bottom-right-radius:20px;">
+
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th style="text-align: center;">تاريخ التزويد</th>
+                <th style="text-align: center;">كمية الوقود</th>
+                <th style="text-align: center;">مزود الوقود</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.Fuel)
+            {
+                <tr>
+                    <td style="text-align: center">@item.SupplyDateOnly</td>
+                    <td style="text-align: center">@item.FuelQuantity</td>
+                    <td style="text-align: center;">@item.Fuelprovider?.NameFuelProvider</td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+    <table style="display:flex;flex-direction:column;align-content:flex-end;flex-wrap:wrap" class="table">
+        <tbody>
+            <tr>
+
+
+
+                <td class="border-bottom-0" style="text-align: center; width:100px">
+                    @{
+                        var TotalFuelQuantity = 0;
+
+                        foreach (var Total in Model.Fuel)
+                        {
+                            TotalFuelQuantity += Total.FuelQuantity;
+
+                        }
+                    }
+                    <h6>@TotalFuelQuantity</h6>
+
+                </td>
+                <td class="border-bottom-0" style="text-align: center; width:200px">
+                    <h6>مجموع الوقود</h6>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
+
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+<div style="padding:10px;text-align:center;border-top: 1px dashed ;border-left:1px dashed;border-right:1px dashed;border-top-left-radius: 20px; border-top-right-radius:20px;margin-top:3px">
+    <h4>المصاريف</h4>
+</div>
+
+<div style="border: 1px dashed;border-bottom-left-radius: 20px; border-bottom-right-radius:20px;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="text-align: center;">اليوم</th>
+                <th style="text-align: center;">اسم القطعة</th>
+                <th style="text-align: center;">سعر القطعة</th>
+                <th style="text-align: center;">عدد القطع</th>
+                <th style="text-align: center;">مجموع سعر القطع</th>
+                <th style="text-align: center;">مزود القطع</th>
+                <th style="text-align: center;">سعر الصيانه</th>
+                <th style="text-align: center;">كراج التصليح</th>
+                <th style="text-align: center;">التاريخ</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.Expenses)
+            {
+                <tr>
+                    <td style="text-align: center">@item.DateExchange.ToString("dddd")</td>
+                    <td style="text-align: center">@item.NamePiece</td>
+                    <td style="text-align: center">@item.UnitPrice</td>
+                    <td style="text-align: center">@item.NumberPieces</td>
+                    <td style="text-align: center">@(item.UnitPrice * item.NumberPieces)</td>
+
+
+                    <td style="text-align: center;">@item.sparePartsCenters?.NameCenter</td>
+                    <td style="text-align: center;">@item.MaintenancePrice</td>
+                    <td style="text-align: center;">@item.repairWorkshops?.NameRepairShop</td>
+                    <td style="text-align: center;">@item.DateExchange</td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+    <table style="display:flex;flex-direction:column;align-content:flex-end;flex-wrap:wrap" class="table">
+        <tbody>
+            <tr>
+
+
+
+                <td class="border-bottom-0" style="text-align: center; width:100px">
+                    @{
+                        int TotaleUnitPrice = 0;
+
+                        foreach (var Total in Model.Expenses)
+                        {
+                            TotaleUnitPrice += Total.UnitPrice * Total.NumberPieces;
+
+                        }
+                    }
+                    <h6>@TotaleUnitPrice</h6>
+
+                </td>
+                <td class="border-bottom-0" style="text-align: center; width:200px">
+                    <h6>مجموع سعر القطع</h6>
+                </td>
+             
+
+
+
+                <td class="border-bottom-0" style="text-align: center; width:100px">
+                    @{
+                        int TotaleNumberPieces = 0;
+
+                        foreach (var Total in Model.Expenses)
+                        {
+                            TotaleNumberPieces += Total.NumberPieces;
+
+                        }
+                    }
+                    <h6>@TotaleNumberPieces</h6>
+
+                </td>
+                <td class="border-bottom-0" style="text-align: center; width:200px">
+                    <h6>مجموع عدد القطع</h6>
+                </td>
+             
+
+
+
+                <td class="border-bottom-0" style="text-align: center; width:100px">
+                    @{
+                        int TotaleMaintenancePrice = 0;
+
+                        foreach (var Total in Model.Expenses)
+                        {
+                            TotaleMaintenancePrice += Total.MaintenancePrice;
+
+                        }
+                    }
+                    <h6>@TotaleMaintenancePrice</h6>
+
+                </td>
+                <td class="border-bottom-0" style="text-align: center; width:200px">
+                    <h6>مجموع سعر التصليح</h6>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+ 
+<div style="padding:10px;text-align:center;border-top: 1px dashed ;border-left:1px dashed;border-right:1px dashed;border-top-left-radius: 20px; border-top-right-radius:20px;margin-top:3px">
+    <h4>المخالفات</h4>
+</div>
+
+<div style="border: 1px dashed;border-bottom-left-radius: 20px; border-bottom-right-radius:20px;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="text-align: center;"> اليوم المخالفة</th>
+                <th style="text-align: center;">مكان المخلفة</th>
+                <th style="text-align: center;">تاريخ المخالفه</th>
+                <th style="text-align: center;">وقت المخالفه</th>
+                <th style="text-align: center;">سبب المخالفة</th>
+                <th style="text-align: center;">مبلغ المخالفه</th>
+                <th style="text-align: center;">اسم السائق</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.trafficViolations)
+            {
+                <tr>
+                    <td style="text-align: center">@item.DateOfViolation.ToString("dddd")</td>
+                    <td style="text-align: center">@item.LocationOfViolation</td>
+                    <td style="text-align: center">@item.DateOfViolation</td>
+                    <td style="text-align: center">@item.TiemOfViolation</td>
+                    <td style="text-align: center">@item.reasonForViolation</td>
+
+
+                    <td style="text-align: center;">@item.AmountViolated</td>
+                    <td style="text-align: center;">@item.driver?.Name</td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+    <table style="display:flex;flex-direction:column;align-content:flex-end;flex-wrap:wrap" class="table">
+        <tbody>
+            <tr>
+
+
+
+                <td class="border-bottom-0" style="text-align: center; width:100px">
+                    @{
+                        int TotaleAmountViolated = 0;
+
+                        foreach (var Total in Model.trafficViolations)
+                        {
+                            TotaleAmountViolated += Total.AmountViolated;
+
+                        }
+                    }
+                    <h6>@TotaleAmountViolated</h6>
+
+                </td>
+                <td class="border-bottom-0" style="text-align: center; width:200px">
+                    <h6>مجموع سعر القطع</h6>
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+
+</div>
+
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+<div style="padding:10px;text-align:center;border-top: 1px dashed ;border-left:1px dashed;border-right:1px dashed;border-top-left-radius: 20px; border-top-right-radius:20px;margin-top:3px">
+    <h4>حاله الشهر</h4>
+</div>
+ 
+<div style="border: 1px dashed;border-bottom-left-radius: 20px; border-bottom-right-radius:20px;">
+    <table style="" class="table">
+        <tbody>
+
+
+
+
+            @foreach (var item_all_Report in Model.CombinedList)
+            {
+                <tr>
+
+                    <td style ="text-align:right" colspan="10">
+                        @item_all_Report.PluralPrice
+                    </td>
+                    <td style="text-align: right;padding-right: 17px;width: 250px;">مجموع بيانات الوميه</td>
+                </tr>
+                <tr>
+
+                    <td style="text-align:right" colspan="10">@item_all_Report.PluralFuelQuantity</td>
+                    <td style="text-align: right;padding-right: 17px;width: 250px;">مجموع بيانات الوقود</td>
+                </tr>
+                <tr>
+
+                    <td style="text-align:right" colspan="10">@item_all_Report.Pluralexpenses</td>
+                    <td style="text-align: right;padding-right: 17px;width: 250px;">مجموع بيانات المصاريف</td>
+                </tr>
+                <tr>
+
+                    <td style="text-align:right" colspan="10">@item_all_Report.PluraltrafficViolations</td>
+                    <td style="text-align:right;padding-right:17px;width: 250px;text-align:right">مجموع بيانات المخالفات</td>
+                </tr>
+                <tr>
+                    <td style="text-align:right" colspan="10">@(item_all_Report.PluralPrice - item_all_Report.PluralFuelQuantity - item_all_Report.PluraltrafficViolations - item_all_Report.Pluralexpenses) </td>
+                    @if (item_all_Report.PluralPrice >= item_all_Report.PluralFuelQuantity - item_all_Report.PluraltrafficViolations - item_all_Report.Pluralexpenses)
+                    {
+                        <td style="text-align: right;padding-right: 17px;width: 250px;"> حاله الشهر جيد انت في تقدم</td>
+                    }
+                    else
+                    {
+
+                        <td style="text-align: right;padding-right: 17px;"> حاله الشهر غير جيد انت في خساره </td>
+                    }
+
+
+                     
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>
+
+
+</div>
+ 
+
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@
+@*============================================================================================================================================================================*@

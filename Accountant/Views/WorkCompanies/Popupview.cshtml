@@ -1,0 +1,22 @@
+﻿<div id="my-popup" style="display: none;">
+    <h1>هذا هو عنوان الشاشة المنبثقة</h1>
+    <p>هذا هو نص الشاشة المنبثقة</p>
+</div>
+
+
+
+<script>
+    $(document).ready(function () {
+        // اعرض الشاشة المنبثقة
+        $("#my-popup").show();
+    });
+    $(document).ready(function () {
+        // اعرض الشاشة المنبثقة
+        $("#my-popup").dialog({
+            modal: true,
+            title: "عنوان الشاشة المنبثقة",
+            closeOnEscape: true,
+        });
+    });
+
+</script>

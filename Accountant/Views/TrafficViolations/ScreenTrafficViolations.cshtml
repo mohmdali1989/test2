@@ -1,0 +1,299 @@
+﻿@model Accountant.Models.ViewModel.ViewModelTrafficViolations
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<style>
+    .StatusButtonCar {
+        background-color: #00146bc9;
+        height: 120px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .StatusButtonCarNO {
+        height: 120px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+ @*=========================================================================================================================*@
+   
+
+
+    .ScreenTransparent {@*الشاشة الشفافة الي بتكون خلف الشاشة المنثقة*@
+        /* تخفي النافذة المنبثقة بشكل افتراضي */
+        display: none;
+        /* تجعل النافذة المنبثقة في موقع ثابت على الشاشة */
+        position: fixed;
+        /* تحدد الترتيب الرأسي للنافذة المنبثقة */
+        z-index: 1;
+        /* تضيف مساحة فارغة بين الحد العلوي للنافذة المنبثقة والمحتوى داخلها */
+        padding-top: 100px;
+        /* تجعل النافذة المنبثقة محاذاة مع الجزء العلوي والجانب الأيسر من الشاشة */
+        left: 0;
+        top: 0;
+        /* تجعل النافذة المنبثقة تأخذ كامل العرض والارتفاع المتاح لها */
+        width: 100%;
+        height: 100%;
+        /* تحدد ما يحدث عندما يكون المحتوى أكبر من النافذة المنبثقة */
+        overflow: auto;
+        /* تحدد لون الخلفية للنافذة المنبثقة */
+        background-color: rgba(0,0,0,0.3);
+    }
+    .ScreenTransparent:target {@* وبيعرف انو لازم اتكون اشاشة شغاله واذا كان لا معناتو الاشاشة مش شغاله  #MyScreen بيعرف باسم اديف او الصندوق Url هذا الكود بيعني انو في *@ @*هذي عشان تعطي امر ل Url بان يكنب الكود مثال #MyScreen يعني اسم الصندوق الي هو معرف id*@
+        display:block;
+    } 
+    .ScreenAddDate {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction:row;
+        width:80%;
+         
+        border: 1px solid rgba(0, 0, 0,0.2);
+        border-radius: .3rem;
+        outline: 1px solid #5987cb57;@*رسم خط *@
+        background-clip:padding-box; @*لتحدي مكان رثم الخط  هذي يعني داخل الصندوق*@
+    }
+    .ScreenAddDate >div{
+        flex:1;
+         padding: 40px; 
+           position: relative;
+           display:flex;
+               flex-direction: column;
+
+    }
+    .ScreenAddDate > div:not(:last-child)::after {
+       content:"";
+            position:absolute;
+       right:0;
+       top:10%;
+       bottom:10%;
+       width:1px;
+       background:linear-gradient(to bottom ,transparent,#9293bf7d, transparent);
+
+    
+     
+    }
+    .CloseScreenAddDate {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+ 
+ @*=========================================================================================================================*@
+  .transparent-border {
+       width: 450px;
+   
+       margin:auto
+ }
+ .DaleteTrafficViolations{
+        align-content: center
+ }
+  .DaleteTrafficViolations a{
+       width:30px;height:20px; color:red;display:flex;align-items: center;
+    justify-content: center;
+ }
+  .DaleteTrafficViolations a:hover{
+        color:#a71414; 
+ }
+
+</style>
+ 
+
+ 
+    <table>
+        <thead>
+            <tr>
+
+                @if (Model.Car_List.Count != 0)
+                {
+                    @foreach (var item in Model.Car_List)
+                    {
+                        @if (item.Id == Model.StatusButtonCar)
+                        {
+
+                            <th><a class="btn btn-primary StatusButtonCar" href="~/TrafficViolations/ScreenTrafficViolations?IDCar=@item.Id&CarName=@item.NameCar">@item.NameCar </a></th>
+                        }
+                        else
+                        {
+                            <th><a class="btn btn-primary StatusButtonCarNO" href="~/TrafficViolations/ScreenTrafficViolations?IDCar=@item.Id&CarName=@item.NameCar">@item.NameCar </a></th>
+                        }
+                    }
+                }
+                else
+                {
+                    <th><a style="height:120px; width:120px" class="btn btn-primary">لا يوجد سائقين </a></th>
+
+                }
+            </tr>
+        </thead>
+    </table>
+    
+
+    <div id="MyScreen" class="ScreenTransparent">
+        <a href="~/TrafficViolations/ScreenTrafficViolations?IDCar=@Model.StatusButtonCar" class="CloseScreenAddDate"></a>
+
+        <div class="ScreenAddDate">
+             
+            <div>
+                <label style="font-size:40px;margin: 15px auto;}">تسجيل مخالفات </label>
+            <form asp-action="ScreenTrafficViolations">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <span asp-validation-for="TrafficViolations_M.Messages" class="text-danger"></span>
+                <span asp-validation-for="TrafficViolations_M.Error" class="text-danger"></span>
+
+                <div class="form-group">
+                    <input asp-for="TrafficViolations_M.Id" class="form-control" hidden />
+                </div>
+                
+                 <div class="form-group">
+                   
+                    <input asp-for="TrafficViolations_M.CarId" value="@Model.StatusButtonCar" class="form-control" hidden/>
+                    @* <input asp-for="TrafficViolations_M.car!.NameCar" value="@Model.CarName" class="form-control" hidden/> *@
+                    
+                </div>
+                <div class="form-group">
+                    <label asp-for="TrafficViolations_M.LocationOfViolation" class="control-label"></label>
+                    <input asp-for="TrafficViolations_M.LocationOfViolation" class="form-control"/>
+                    <span asp-validation-for="TrafficViolations_M.LocationOfViolation" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="TrafficViolations_M.DateOfViolation" class="control-label"></label>
+                    <input asp-for="TrafficViolations_M.DateOfViolation" class="form-control" type="date" value="@String.Format("{0:yyyy-MM-dd}", Model.TrafficViolations_M.DateOfViolation)" />
+                    <span asp-validation-for="TrafficViolations_M.DateOfViolation" class="text-danger"></span>
+                </div>
+            
+             
+             
+                <div class="form-group">
+                    <label asp-for="TrafficViolations_M.TiemOfViolation" class="control-label"></label>
+                    <input asp-for="TrafficViolations_M.TiemOfViolation" class="form-control"  type="time" />
+                    <span asp-validation-for="TrafficViolations_M.TiemOfViolation" class="text-danger"></span>
+                </div>
+
+  
+                <div class="form-group">
+                    <label asp-for="TrafficViolations_M.reasonForViolation" class="control-label"></label>
+                    <input asp-for="TrafficViolations_M.reasonForViolation" class="form-control"   />
+                    <span asp-validation-for="TrafficViolations_M.reasonForViolation" class="text-danger"></span>
+                </div>
+                 <div class="form-group">
+                    <label asp-for="TrafficViolations_M.AmountViolated" class="control-label"></label>
+                    <input asp-for="TrafficViolations_M.AmountViolated" class="form-control"   />
+                    <span asp-validation-for="TrafficViolations_M.AmountViolated" class="text-danger"></span>
+                </div>
+                  <div class="form-group">
+                        <label asp-for="TrafficViolations_M.IdDrivr" class="control-label"></label>
+                        <select asp-for="TrafficViolations_M.IdDrivr" class="form-control">
+                                <option value="">--اختر السائق--</option>
+                               
+                                @foreach (var item in Model.Driver_List)
+                                {
+
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+
+                        <span asp-validation-for="TrafficViolations_M.IdDrivr" class="text-danger"></span>
+                        </div>
+                         <div class="form-group" style="margin:13px 0px 8px 0px">
+                 
+                <label class="form-check-label"  >
+
+                    <input class="form-check-input" asp-for="TrafficViolations_M.PushStatus" /> @Html.DisplayNameFor(model => model.TrafficViolations_M.PushStatus)
+                     
+
+                </label>
+                 
+                <span asp-validation-for="TrafficViolations_M.PushStatus" class="text-danger"></span>
+            </div>
+                <div class="form-group">
+                    <label asp-for="TrafficViolations_M.dateLastTimePayFine" class="control-label"></label>
+                    <input asp-for="TrafficViolations_M.dateLastTimePayFine" type="date" class="form-control"   />
+                    <span asp-validation-for="TrafficViolations_M.dateLastTimePayFine" class="text-danger"></span>
+                </div>
+                <div class="form-group" style="margin-top:10px">
+                        <input style="width:200px;margin: 15px 0px;" type="submit" value="حفظ" class="btn btn-primary" />         
+                </div>
+ 
+        </form>
+                 
+            </div>
+            <div >
+                <img src="~/img/_baf5aa78-25e7-43c2-b643-7f3d26367d4f.jpg"class="transparent-border" />
+               
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-11">
+
+
+        <a class="btn btn-primary" style="margin:35px 0px 10px 5px;" href="#MyScreen">اضافة بيانات</a>
+         
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th style="text-align:center;">مكان المخلفة</th>
+                        <th style="text-align:center;">اسم اليوم</th>
+                        <th style="text-align:center;">تاريخ المخالفه</th>
+                        <th style="text-align:center;">وقت المخالفه</th>
+                        <th style="text-align:center;">سبب المخالفة</th>
+                        <th style="text-align:center;">مبلغ المخالفه</th>
+                        <th style="text-align:center;">اخر مهله لدفع</th>
+                        <th >خذف</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr  > 
+                      @*   <td style="padding:20px" colspan="8">
+                             <span  style="text-align: center;">مرحبًا</span>
+                        </td> *@
+                        <td colspan="8" style="text-align: center;font-size: 26px;font-weight: 900;">@Model.CarName</td>
+                        
+                    </tr>
+                    @foreach (var item in Model.TrafficViolations_List)
+                    {
+                        @*  onclick="navigateToURL(@item.Id , true);" *@
+                        <tr style="cursor:pointer;" class="myTable" onclick="window.location.href='@Url.Action("ScreenTrafficViolations","TrafficViolations",new {IDTrafficViolations = item.Id , IDCar = item.CarId,AddToEdit =true})'+'#MyScreen'" >
+                            <td style="text-align:center;">@item.LocationOfViolation</td>
+                            <td style="text-align:center;">@item.DateOfViolation.ToString("dddd")</td>
+                            <td style="text-align:center;">@item.DateOfViolation.ToString("yyyy-MM-dd")</td>
+                            <td style="text-align:center;">@item.TiemOfViolation</td>
+                            <td style="text-align:center;">@item.reasonForViolation</td>
+                            <td style="text-align:center;">@item.AmountViolated</td>
+                            <td style="text-align:center;">@item.dateLastTimePayFine.ToString("yyyy-MM-dd")</td>
+                            <td class="DaleteTrafficViolations"><a style=" " href="~/TrafficViolations/DeleteTrafficViolations?ID=@item.Id" class="fas fa-trash"></a></td>
+  
+                        </tr>
+                        
+                    }
+                </tbody>
+            </table>
+     
+
+        @section Scripts {
+            @{
+                //هذا مهم جدا لانه يقوم بفحص اذا البيانات فاغة ولا لا حسب الي موضع في الفيو اذا اخترنا ان يكون في بيانات
+                await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+            }
+        }
+    </div>
+
+ 

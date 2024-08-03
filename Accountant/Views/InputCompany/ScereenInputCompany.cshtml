@@ -1,0 +1,267 @@
+﻿@model Accountant.Models.ViewModel.ViewModelInputCompany
+<link rel="stylesheet" href="~/css/CssLnputCompany/cssInputCompany.css">
+@*  style="top: 73px;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    height: 150px;" *@
+
+
+<div>
+    <form>
+        <table>
+            <thead>
+                <tr>
+                    @if (Model.workCompanies_List.Count != 0)
+                    {
+                        @foreach (var item in Model.workCompanies_List)
+                        {
+                            @if (item.Id == Model.StatusButtonworkCompaniesID)
+                            {
+                                <th><a class="btn btn-primary StatusButtonworkCompanies" href="~/InputCompany/ScereenInputCompany?WorkCompniesID=@item.Id">@item.CompanyName </a></th>
+                            }
+                            else
+                            {
+                                <th><a class="btn btn-primary StatusButtonworkCompaniesNO" href="~/InputCompany/ScereenInputCompany?WorkCompniesID=@item.Id">@item.CompanyName </a></th>
+                            }
+}
+                    }
+                    else
+                    {
+                        <th><a style="height:120px; width:120px" class="btn btn-primary">لا يوجد سائقين </a></th>
+                    }
+                </tr>
+            </thead>
+
+        </table>
+    </form>
+</div>
+
+<div >
+    <form asp-action="ScereenInputCompany">
+            <table class="table" >
+            <thead>
+                <tr>
+                    <th style="text-align:center;">اسم الشركة</th>
+                    <th style="text-align:center;">مبلغ المستلم</th>
+                    <th style="text-align:center;">التاريخ الستلام المبلغ</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                
+                <tr class="@(Model.AddToEdit ? "EditTableDate" : "tableDate")" style="background: #182a7b0a;border-bottom: 3px solid #0d6efd2b;
+
+
+">
+                    <th class="col-md-3 input1 ">
+                        <input class="form-control" placeholder="البيانات الجديدة" value="@Model.StatusButtonworkCompaniesName" />
+                    </th>
+                    <div class="form-group">
+                        <input asp-for="inputCompany_M.Id" class="form-control" hidden />
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="StatusButtonworkCompaniesID" class="form-control" value="@Model.StatusButtonworkCompaniesID" hidden />
+                    </div>
+                    <th class="col-md-3 input2">
+                        <input asp-for="inputCompany_M.AmountMoneyReceived" type="" placeholder="البيانات الجديدة">
+                         <span asp-validation-for="inputCompany_M.AmountMoneyReceived" class="text-danger"></span>  
+                    </th>
+                    <th class="col-md-5 input3">
+                        <input asp-for="inputCompany_M.DateReceiptMoney" type="date" class="inputDate" placeholder="البيانات الجديدة">
+                        <span asp-validation-for="inputCompany_M.DateReceiptMoney" class="text-danger"></span>  
+                    </th>
+                    <th class="input4">
+                        <input type="submit" value="@(Model.AddToEdit ? "حفظ تعديل":"اظافه")">
+                    </th>
+                </tr>
+                
+                    @*  الفكره الي لدي ان اضيف كل مجموعة من التاريخ بلون  *@
+                    @foreach (var item in Model.inputCompanies_List)
+                    {
+                    <tr style="cursor:pointer;" onclick="window.location.href='@Url.Action("ScereenInputCompany","InputCompany",new{AddToEdit =true,WorkCompniesID =Model.StatusButtonworkCompaniesID ,InputCompanyID =item.Id})'">
+                            <td class="col-md-3" style="text-align:center;">@item.workCompanies?.CompanyName</td>
+                            <td class="col-md-3" style="text-align:center;">@item.AmountMoneyReceived</td>
+                            <td class="col-md-6" style="text-align:center;">@item.DateReceiptMoney</td>
+                        <td class="td_a"><a href="~/InputCompany/DeleteInputCompany?ID=@item.Id">حذف</a></td>
+                        </tr>
+                    }
+                 
+            </tbody>
+        </table>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*   <tr style="cursor:pointer;" class="myTable" onclick="navigateToURL(@item.id , true);">
+                <td style="text-align:center;">@item.VacationDate.ToString("dddd")</td>
+                <td style="text-align:center;">@item.VacationDate.ToString("yyyy-MM-dd")</td>
+                <td style="text-align:center;">@item.PushStatusDescription</td>
+
+                @if (item.PushStatus == true)
+                {
+                <td style="text-align:center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" font-family="" font-weight="900" color="#63E6BE" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                <path d="M13.736 3.97a.733.800 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.125z" />
+                </svg>
+                </td>
+                }
+                else
+                {
+                <td style="text-align:center;" class="@(item.PushStatus ? "green-highlight" : "green-highlightColor")">@(item.PushStatus ? "نعم" : "غير مدفوع")</td>
+                @* هذا الشرط نضعو قبل ان نسدعي الستايل  وشرط من نوع الشرط الثلاثي
+                }
+
+                *@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @* 
+
+ <tr>
+                    <div>
+                        <form style="margin-top:-15px" asp-action="ScereenInputCompany">
+                            <table class="table tableDate">
+
+
+                                <tbody>
+
+                                    <tr>
+                                        
+
+
+
+
+
+                                        <td class="col-md-3">
+
+
+                                            <input class="form-control" placeholder="البيانات الجديدة" value="@Model.StatusButtonworkCompaniesName" />
+
+                                        </td>
+                                        <div class="form-group">
+                                            <input asp-for="inputCompany_M.Id" class="form-control" hidden />
+                                        </div>
+                                        <div class="form-group">
+                                            <input asp-for="StatusButtonworkCompaniesID" class="form-control" value="@Model.StatusButtonworkCompaniesID" hidden />
+                                        </div>
+                                        <td class="col-md-3">
+                                            <input asp-for="inputCompany_M.AmountMoneyReceived" type="" placeholder="البيانات الجديدة">
+                                            <span asp-validation-for="inputCompany_M.AmountMoneyReceived" class="text-danger"></span>
+                                        </td>
+                                        <td class="col-md-5">
+                                            <input asp-for="inputCompany_M.DateReceiptMoney" type="date" class="inputDate" placeholder="البيانات الجديدة">
+                                            <span asp-validation-for="inputCompany_M.DateReceiptMoney" class="text-danger"></span>
+                                        </td>
+
+
+                                        <td class="col-md-2">
+                                            <input type="submit" value="إضافة">
+                                        </td>
+
+
+
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </tr>
+ *@
+ 
+
+  
+@section Scripts {
+    @{
+        //هذا مهم جدا لانه يقوم بفحص اذا البيانات فاغة ولا لا حسب الي موضع في الفيو اذا اخترنا ان يكون في بيانات
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+            }
+
+
+               

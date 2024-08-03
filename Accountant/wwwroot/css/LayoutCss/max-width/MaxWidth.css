@@ -1,0 +1,130 @@
+﻿@media(max-width:1290px) {
+    .boxs {
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 25px;
+    }
+
+    .Top-bar {
+        grid-template-columns: 100%;
+    }
+    .List-grid .Grid, .List-grid .List {
+        display: none;
+    }
+    
+
+    
+}
+@media(max-width:1100px) {
+     .cards {
+        grid-template-columns: repeat(2,1fr);
+        gap: 25px;
+    }
+    .Max-Width-card-3 {
+        grid-column: span 2;
+    }
+    .boxs-Short {
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+
+    .Max-Width-box-Short-5 {
+        grid-column: span 2;
+    }
+
+    
+}
+@media(max-width:1200px) {
+    .boxs-Short {
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+    .Max-Width-box-Short-4 {
+        grid-column: span 1;
+    }
+    .Max-Width-box-Short-5 {
+        grid-column: span 2;
+    }
+
+}
+
+ @media(max-width:940px) {
+        .bar {
+            display: none;
+        }
+
+        .VMA .P-VMA {
+            left: 2px;
+        }
+
+        .P-VT {
+            left: 28px;
+        }
+
+        .Content-dashbord.f-width {
+            grid-template-columns: 91px auto;
+        }
+
+        .Sidebar .User-information {
+            margin-bottom: 0px;
+            transition: .5s;
+            position: relative;
+        }
+
+            .Sidebar .User-information h5 {
+                font-size: 0px !important;
+            }
+
+            .Sidebar .User-information p small {
+                font-size: 0 !important;
+            }
+
+        .dividingLine {
+            width: 80px !important;
+            display: block !important;
+            height: 2px !important;
+            background: radial-gradient(#696789 -120%, transparent 64%) !important;
+            margin: 26px 10px !important;
+            border-radius: 138px !important;
+            position: absolute !important;
+            top: 63px !important;
+            left: 0px !important;
+            transition: .5s !important;
+        }
+
+        .Sidebar .Menus > ul > li > a {
+            font-size: 0px !important;
+        }
+    .boxs-Short {
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+
+     
+
+    .Max-Width-box-Short-5 {
+        grid-column: span 2;
+    }
+    }
+    @media(max-width:790px) {
+        .boxs {
+            grid-template-columns: repeat(1,1fr);
+            column-gap: 25px;
+        }
+        /*===================*/
+        .cards {
+            grid-template-columns: repeat(1,1fr);
+            gap: 25px;
+        }
+
+        .Max-Width-card-3 {
+            grid-column: span 1;
+        }
+        /*===================*/
+        .boxs-Short {
+            grid-template-columns: repeat(1,1fr);
+            gap: 20px;
+        }
+    }
+
+   
+ 

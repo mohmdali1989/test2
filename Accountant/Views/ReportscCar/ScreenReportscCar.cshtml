@@ -1,0 +1,570 @@
+﻿@model Accountant.Models.ViewModel.ReportscVM.ReportscCarViewModel
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+ <style>
+    .StatusButtonCar {
+        background-color: #00146bc9;
+        height: 120px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .StatusButtonCarNO {
+        height: 120px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ </style>
+
+<table>
+    <thead>
+        <tr>
+
+            @if (Model.Cars.Count != 0)
+            {
+                @foreach (var item in Model.Cars)
+                {
+                    @if (item.Id == Model.StatusButtonCar)
+                    {
+
+                        <th><a class="btn btn-primary StatusButtonCar" href="~/ReportscCar/ScreenReportscCar?IDCar=@item.Id">@item.NameCar </a></th>
+                    }
+                    else
+                    {
+                        <th><a class="btn btn-primary StatusButtonCarNO" href="~/ReportscCar/ScreenReportscCar?IDCar=@item.Id">@item.NameCar </a></th>
+                    }
+                }
+            }
+            else
+            {
+                <th><a style="height:120px; width:120px" class="btn btn-primary">لا يوجد مركبات </a></th>
+
+            }
+        </tr>
+    </thead>
+</table>
+
+<style>
+    .table2 {
+        border-collapse: collapse;
+    }
+
+        .table2  {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+    .td2 > td:not(:last-child) {
+        border-right: 1px solid #d0cee1;
+
+    }
+</style> 
+ 
+
+
+
+@*==========================================================*@
+
+
+<style>
+    .DivStyle {
+        background: #31527b;
+        width: 100%;
+        height: 79px;
+        border-radius: 12px;
+        text-align: center;
+        align-content: center;
+        font-size: 34px;
+        color: #fff;
+    }
+
+    .table-style {
+        width: 100%;
+    }
+
+    .table-style > thead {
+        height: 70px;
+        border-bottom: 1px dashed grey;
+        text-align: center;
+        width: 100%;
+    }
+
+    .table-style > tfoot {
+        height: 70px;
+        border-top: 1px dashed grey;
+        text-align: center
+    }
+
+    .table-style > tfoot tr th table {
+        width: 100%;
+    }
+
+    .table-style tbody {
+        text-align: center;
+        height: 70px
+    }
+
+
+    .table-style tbody tr td table {
+        width: 100%;
+        border-bottom: none;
+        padding: 20px
+    }
+
+    .table-style tbody tr td {
+        vertical-align: top;
+    }
+
+    .table-style tbody tr td table tr {
+        padding: 20px
+    }
+
+    .TableToTdRight {
+        padding-right: 25px;
+        padding-bottom: 25px;
+        
+    }
+
+    .TableToTdLeft {
+        padding-left: 25px;
+        padding-bottom: 25px;
+    }
+
+    .table-style tbody tr td table thead {
+        height: 70px
+    }
+
+    
+
+</style>
+ 
+<div onclick="goToPage()">انقر هنا للانتقال إلى الصفحة</div>
+
+ 
+
+@foreach (var item in Model.DateYearMonth)
+ {
+    <div style="margin: 50px 0px;cursor:pointer;" onclick="goToPage(@Model.IDCar , @item.Month , @item.Year)">
+        <div style="border: 1px dashed;border-radius: 20px;margin-top:20px">
+            <div class="DivStyle">
+                <div style="display:flex;flex-direction: row-reverse;align-items: center;">
+                    <div style="width: 100%">
+                        @item.Month-@item.Year
+                    </div>
+
+                    <div style="padding-left: 25px;">
+                        @foreach (var Combined in Model.CombinedList)
+                        {
+
+                            if (item.Month ==Combined.Month && item.Year== Combined.Year)
+                            {
+                                decimal TotalCombined;
+                                TotalCombined = Combined.PluraltrafficViolations + Combined.PluralExpenses + Combined.PluralFuelQuantity + Combined.Pluralexpenses;
+                                if (Combined.PluralPrice < TotalCombined)
+                                    {
+                                        <i style="color: crimson;" class="fa fa-caret-down" aria-hidden="true"></i>
+                                    }
+                                    else
+                                    {
+                                        <i style="color:forestgreen " class="fa fa-caret-up" aria-hidden="true"></i>
+                                    }
+                            }
+
+
+                                      
+
+
+                                     
+
+
+                                 
+                             
+                        }
+
+                    </div>
+
+                </div>
+                
+            </div>
+            <table class="table-style">
+                <thead>
+                    <tr>
+
+                        <th>المخلالفات</th>
+                        <th>بيانات التصليح</th>
+                        <th>بيانات القطع</th>
+                        <th>بيانات السولر</th>
+                        <th>بيانات اليويمه</th>
+
+
+
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="TableToTdLeft">سعر المخلافه</th>
+                                        <th class="TableToTdRight">مكان المخلافه</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var itemtrafficViolations in Model.trafficViolations)
+                                    {
+                                        if (item.Month == itemtrafficViolations.Month && item.Year == itemtrafficViolations.Year)
+                                        {
+                                            <tr>
+                                                <td class="TableToTdLeft">@itemtrafficViolations.AmountViolated₪</td>
+
+                                                <td class="TableToTdRight">@itemtrafficViolations.driver?.Name</td>
+
+                                            </tr>
+                                        }
+                                    }
+                                    
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="TableToTdLeft">مجموعة التصليخ</th>
+                                        <th class="TableToTdRight">محل التصليخ</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var itemExpensesWork in Model.ExpensesWork)
+                                    {
+                                        if (item.Month == itemExpensesWork.Month && item.Year == itemExpensesWork.Year)
+                                        {
+                                            <tr>
+                                                <td class="TableToTdLeft">@itemExpensesWork.MaintenancePrice₪</td>
+
+                                                <td class="TableToTdRight">@itemExpensesWork.repairWorkshops?.NameRepairShop</td>
+
+                                            </tr>
+                                        }
+                                    }
+
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="TableToTdLeft">مجموعة سعر </th>
+                                        <th class="TableToTdRight">اسم محل </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var itemExpenses in Model.Expenses)
+                                    {
+                                        if (item.Month == itemExpenses.Month && item.Year == itemExpenses.Year)
+                                        {
+                                            <tr>
+                                                <td class="TableToTdLeft">@itemExpenses.Total₪</td>
+
+                                                <td class="TableToTdRight">@itemExpenses.sparePartsCenters?.NameCenter</td>
+
+                                            </tr>
+                                        }
+                                    }
+                                     
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="TableToTdLeft">كميه السولر</th>
+                                        <th class="TableToTdRight">موقع السولر</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach(var itemFuel in Model.Fuel)
+                                        {
+
+                                        if (itemFuel.Month == item.Month && itemFuel.Year == item.Year)
+                                            { 
+                                                <tr>
+                                                    <td class="TableToTdLeft">@itemFuel.FuelQuantity لتر</td>
+                                                    <td class="TableToTdRight">@itemFuel.Fuelprovider?.NameFuelProvider</td>
+                                                </tr>
+                                            }
+                                         
+
+                                        }
+                                     
+                                     
+
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <thead>
+                                    <tr>
+
+                                        <th class="TableToTdLeft">مجموعة النقل</th>
+                                        <th class="TableToTdRight">صاحب النقل</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var item1 in Model.WorkDiary)
+                                    {
+                                        if (item1.Month == item.Month && item1.Year == item.Year)
+                                        {
+                                            <tr>
+                                                <td class="TableToTdLeft">@item1.TransportationPrice₪</td>
+                                                <td class="TableToTdRight">@item1.workCompanies?.CompanyName</td>
+                                            </tr>
+                                        }
+                                       
+                                    }
+                                </tbody>
+                            </table>
+                        </td>
+
+
+
+
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>
+
+
+                            <table>
+                                <thead>
+                                    @foreach (var PluralitemtrafficViolations in Model.CombinedList)
+                                    {
+                                        if (item.Month == PluralitemtrafficViolations.Month && item.Year ==PluralitemtrafficViolations.Year)
+                                        {
+                                            <tr>
+
+
+                                                <th style="font-weight:500 ;width: 50%;" class="TableToTdLeft">@PluralitemtrafficViolations.PluraltrafficViolations₪</th>
+                                                <th class="TableToTdRight">:  المجموع</th>
+                                            </tr>
+                                        }
+                                    }
+                                </thead>
+
+                            </table>
+                        </th>
+
+
+
+
+
+
+                        <th>
+
+
+                            <table>
+                                <thead>
+                                    @foreach (var PluralitemExpensesWork in Model.CombinedList)
+                                    {
+                                        if (item.Month == PluralitemExpensesWork.Month && item.Year == PluralitemExpensesWork.Year)
+                                        {
+                                            <tr>
+
+
+                                                <th style="font-weight:500;width: 50%;" class="TableToTdLeft">@PluralitemExpensesWork.Pluralexpenses₪</th>
+                                                <th class="TableToTdRight">:  المجموع</th>
+                                            </tr>
+                                        }
+                                    }
+
+                                </thead>
+
+                            </table>
+                        </th>
+
+
+
+
+
+
+                        <th>
+
+
+                            <table>
+                                <thead>
+                                    @foreach (var PluralitemExpenses in Model.CombinedList)
+                                    {
+                                        if (item.Month == PluralitemExpenses.Month && item.Year == PluralitemExpenses.Year)
+                                        {
+                                            <tr>
+
+
+                                                <th style="font-weight:500;width: 50%;" class="TableToTdLeft">@PluralitemExpenses.PluralExpenses₪</th>
+                                                <th class="TableToTdRight">:  المجموع</th>
+                                            </tr>
+                                        }
+                                    }
+                                    
+                                </thead>
+
+                            </table>
+                        </th>
+
+
+
+
+
+
+
+                        <th>
+
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        @foreach (var PluralFuelQuantity_Item in Model.CombinedList)
+                                        {
+
+                                            if (PluralFuelQuantity_Item.Month == item.Month && PluralFuelQuantity_Item.Year == item.Year)
+                                            {
+                                                <th style="font-weight:500;width: 50%;" class="TableToTdLeft">@PluralFuelQuantity_Item.PluralFuelQuantity لتر</th>
+                                                 <th class="TableToTdRight">:  المجموع</th>
+                                            }
+                                        }
+
+                                       
+                                    </tr>
+                                </thead>
+
+                            </table>
+                        </th>
+
+
+
+                        <th>
+
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        @foreach (var item3 in Model.CombinedList)
+                                        {
+
+                                            if (item3.Month == item.Month && item3.Year == item.Year)
+                                            {
+                                               
+                                                <th style="font-weight:500;width: 50%;" class="TableToTdLeft">@item3.PluralPrice₪</th>
+                                                <th class="TableToTdRight">:  المجموع</th>
+
+                                            }
+                                            
+                                        }
+                                         
+                                    </tr>
+                                </thead>
+
+                            </table>
+                        </th>
+
+
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+</div>
+    
+}
+
+
+<script>
+    function goToPage(IDCar, dateOnly_M, dateOnly_Y) {
+        window.location.href = '/ReportscCar/ScreenAllCar_W_F_E_T?IDCar=' + IDCar + '&dateOnly_M=' + dateOnly_M + '&dateOnly_Y=' + dateOnly_Y;
+           }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+@* <style>
+    td {
+        vertical-align: top;
+    }
+
+    .extended-column {
+        rowspan: span;
+    }
+</style>
+
+<table class="table">
+    <tr>
+        <th>اسم</th>
+        <th class="extended-column">تفاصيل</th>
+    </tr>
+    <tr>
+        <td>محمد</td>
+        <td>
+            <p>هذه بعض المعلومات التفصيلية عن محمد.</p>
+            <p>يمكن أن تحتوي هذه المعلومات على عدة صفوف.</p>
+            <p>وسيتم إمداد العمود تلقائيًا ليتناسب مع جميع هذه المعلومات.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>علي</td>
+        <td><p>هذه بعض المعلومات التفصيلية عن علي.</p></td>
+    </tr>
+</table> *@

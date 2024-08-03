@@ -1,0 +1,156 @@
+﻿@model Accountant.Models.ViewModel.FuelViewModel
+
+@inject IHttpContextAccessor HttpContextAccessor;
+<style>
+    .StatusButtonCar {
+        background-color: #00146bc9;
+        height: 120px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .StatusButtonCar1 {
+        height: 120px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<form>
+    <table>
+        <thead>
+            <tr>
+
+                @if (Model.DataCar_List.Count != 0)
+                {
+                    @foreach (var item in Model.DataCar_List)
+                    {
+                        @if (item.Id == Model.StatusButtonCar)
+                        {
+
+                            <th><a class="btn btn-primary StatusButtonCar" href="~/Fuel/ScreenFuel?Car_ID=@item.Id">@item.NameCar </a></th>
+                        }
+                        else
+                        {
+                            <th><a class="btn btn-primary StatusButtonCar1" href="~/Fuel/ScreenFuel?Car_ID=@item.Id">@item.NameCar </a></th>
+                        }
+                    }
+                }
+                else
+                {
+                    <th><a style="height:120px; width:120px" class="btn btn-primary">لا يوجد مركبات </a></th>
+
+                }
+                
+            </tr>
+        </thead>
+    </table>
+</form>
+<div>
+
+
+    <div class="form-group" style="margin:30px">
+        <form asp-action="ScreenFuel">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <span asp-validation-for="@Model.fuel_M.Messages" class="text-danger"></span>
+            <span asp-validation-for="@Model.fuel_M.Error" class="text-danger"></span>
+            <H3 class="text-danger">@Model.fuel_M.Error</H3>
+
+            <div class="form-group">
+                <input asp-for="@Model.fuel_M.id" class="form-control" hidden />
+            </div>
+            <div class="form-group">
+                <input asp-for="@Model.fuel_M.CarId" value="@Model.StatusButtonCar" class="form-control" hidden />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.fuel_M.workDiaryID" class="control-label"></label>
+                <select asp-for="@Model.fuel_M.workDiaryID" class="form-control">
+                    <option value="">--اختر تاريخ التزويد الوقود--</option>
+                    @foreach (var item in Model.workDiaries_List)
+                    {
+
+                        <option value="@item.Id">@item.CreatedDateOnly / @item.CreatedDateOnly.ToString("dddd")</option>
+                    }
+                </select>
+
+                <span asp-validation-for="@Model.fuel_M.workDiaryID" class="text-danger"></span>
+            </div>
+             
+            <div class="form-group">
+                <label asp-for="@Model.fuel_M.FuelProviderID" class="control-label"></label>
+                <select asp-for="@Model.fuel_M.FuelProviderID" class="form-control">
+                    <option value="">--اختر المشغل--</option>
+                    @foreach (var item in Model.fuelProviders_List)
+                    {
+
+                        <option value="@item.Id">@item.NameFuelProvider</option>
+                    }
+                </select>
+
+                <span asp-validation-for="@Model.fuel_M.FuelProviderID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.fuel_M.FuelQuantity" class="control-label"></label>
+                <input asp-for="@Model.fuel_M.FuelQuantity" class="form-control" />
+                <span asp-validation-for="@Model.fuel_M.FuelQuantity" class="text-danger"></span>
+            </div>
+             
+           
+
+            <div class="form-group" style="margin-top:10px">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+
+    <div>
+        <form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>تاريخ التزويد</th>
+                        <th>وقت التزويد</th>
+                        <th>كمية الوقود</th>
+                        <th>مصدر وقود</th>
+                         
+                        <th>تعديل</th>
+                        <th>خذف</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.DataFuel_List)
+                    {
+                        <tr>
+                            <td>@item.SupplyDateOnly</td>
+                            <td>@item.SupplyTimeOnly</td>
+                            <td>@item.FuelQuantity</td>
+                            <td>@item.Fuelprovider?.NameFuelProvider</td>
+
+                            <td><a class="btn btn-primary" href="~/Fuel/ScreenFuel?Fuel_Edit=true&Car_ID=@item.CarId&Fuel_Id=@item.id">نعديل</a></td>
+
+                            <td><a class="btn btn-primary" href="~/Fuel/DeleteFuel?id=@item.id">خذف</a></td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </form>
+
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        //هذا مهم جدا لانه يقوم بفحص اذا البيانات فاغة ولا لا حسب الي موضع في الفيو اذا اخترنا ان يكون في بيانات
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

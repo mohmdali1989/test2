@@ -1,0 +1,123 @@
+﻿@model List<MainUserTem>
+
+  
+ <style>
+     .div1
+     {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+
+         
+     }.div1 div{
+         margin:20px;
+         margin:3px
+           
+     }.div1 div p{
+         align-items:center;
+         justify-content:center;
+         line-height: 2.0;
+         
+     }
+     .div1 div table tr td{
+         display:flex;
+         font-size:20px;
+         align-items: center;
+                align-items: center;
+                border-radius: 5px;
+                margin:5px;
+                
+                border: 2px solid #134
+     }
+
+    .div1 div table img {
+       width:50px;
+       height:50px;
+       margin:10px;
+       align-items:center;
+       border-radius:50%;
+       background:red;
+       border: 2px solid red
+        
+    }
+
+    .but_Data{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: stretch;
+        align-items: flex-start;
+    }
+    .but_Data a{
+            text-decoration: none;
+    }
+
+
+ </style>
+<div class="div1">
+    <div>
+       
+
+        <form asp-action="ScreenMainUserTemOK">
+       <table>
+            <thead>
+            
+           <tbody>
+               @foreach(var item in Model)
+                {
+                <tr>
+                        
+                        <td>
+                            <img src=" https://img1.arabpng.com/20180512/pge/kisspng-computer-icons-clip-art-5af760e2554455.2206993715261616343493.jpg" />
+                                <div class="but_Data">
+                                        @item.Name
+                                    <a href="~/MainUserTem/MainUser?Name=@item.Name" onclick="return confirm('هل أنت متأكد موافقه على طلبه؟')">موافق</a>
+                             
+                                </div>
+
+                            
+                        </td>
+                     
+
+                </tr>        
+                }
+
+       
+           </tbody>
+            </table>
+        </form>
+    </div>
+    @if (Model.Count == 0)
+    {
+         
+    }else
+    {
+        <div style="text-align: center;">
+            <p style="max-width: 20em; display: inline-block;">
+                تطورت البرمجة الويب بشكل كبير منذ بداياتها في التسعينيات. في البداية، كانت صفحات الويب تتكون من نصوص بسيطة وصور ثابتة. ومع تطور البرمجة الويب، أصبحت صفحات الويب أكثر تفاعلية وأكثر ديناميكية. وأصبح بإمكان المستخدمين الآن التفاعل مع صفحات الويب بشكل أفضل، والتحكم فيها بشكل أسهل. وأصبح بإمكان المطورين إنشاء تطبيقات الويب المعقدة التي تتضمن مزايا مثل التجارة الإلكترونية، والشبكات الاجتماعية، والألعاب عبر الإنترنت، والخدمات المصرفية عبر الإنترنت، وغيرها. يستخدم المطورون لغات مثل HTML وCSS وJavaScript لإنشاء صفحات الويب. يستخدمون أيضًا لغات برمجة خادم الويب مثل PHP وASP.NET لإنشاء تطبيقات الويب المعقدة
+            </p>
+        </div>
+    }
+
+
+ </div>
+
+@* 
+
+<form class="form-check">
+     
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    @foreach (var item in Model)
+                    {
+                        <th><a class="btn btn-primary" href="~/MainUserTem/MainUser?Name=@item.Name">@item.Name</a></th>
+                        https://localhost:7247/EUpdateEmail/GetEmaiEdit?ID=
+
+                    }
+                </tr>
+            </thead>
+        </table>
+    </div>
+</form>*@

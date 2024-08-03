@@ -1,0 +1,53 @@
+﻿@model List<MainUser>
+
+<div>
+    <p class="text-danger">@ViewBag.Error</p>
+ </div>
+<a asp-action="ScreenAddMainUser" asp-controller="MainUser">
+    تسجيل زبون جديد
+</a>
+ 
+<table class="table">
+    <thead>
+        <tr>
+            <th>اسم الزبون</th>
+            <th>تاريخ تسجيل المستخدم</th>
+            <th>الحاله</th>
+            <th>تعديل</th>
+            <th>حذف</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.CreatedDate</td>
+                @if (item.Confirmed == true)
+                {
+                    <td>
+                        <a href="~/MainUser/EditConfirmedMainUser?ID=@item.Id">ايقاف</a>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a href="~/MainUser/EditConfirmedMainUser?ID=@item.Id">تفعيل</a>
+                    </td>
+                }
+                <td><a href="~/MainUser/ScreenEditMainUser?ID=@item.Id">تعديل</a></td>
+                 
+                <td><a href="~/MainUser/DeleteMainUser?ID=@item.Id">حذف</a></td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-action="ScreenProgramUser" asp-controller="ProgramUser">Back to List</a>
+</div>

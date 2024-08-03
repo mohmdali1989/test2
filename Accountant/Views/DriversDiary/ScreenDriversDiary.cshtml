@@ -1,0 +1,138 @@
+﻿@model Accountant.Models.ViewModel.ViewModelDriversDiary
+
+<div>
+    <style>
+        .StatusButtonCar {
+            background-color: #00146bc9;
+            height: 120px;
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .StatusButtonCar1 {
+            height: 120px;
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .TableCar {
+            margin-right: 50px;
+        }
+
+        .table tbody tr:hover {
+            background-color: #ccc;
+        }
+
+    </style>
+    <div style="display:flex">
+        <div class="TableCar col-md-1">
+            <form>
+
+                <table>
+                    <tbody>
+
+                        @if (Model.Driver_List.Count != 0)
+                        {
+                            @foreach (var item in Model.Driver_List)
+                            {
+                                @if (item.Id == Model.StatusButtonDriver)
+                                {
+                                    <tr>
+                                        <td style="cursor:pointer;"><a class="btn btn-primary StatusButtonCar" href="~/DriversDiary/ScreenDriversDiary?DriverID=@item.Id">@item.Name </a></td>
+
+                                    </tr>
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td style="cursor:pointer;"><a class="btn btn-primary StatusButtonCar1" href="~/DriversDiary/ScreenDriversDiary?DriverID=@item.Id">@item.Name </a></td>
+                                    </tr>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td><a style="height:120px; width:120px" class="btn btn-primary">لا يوجد مركبات </a></td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+
+
+            </form>
+        </div>
+
+        <div class="col-md-11">
+            @* <a class="btn btn-primary" href="~/Expenses/DetailsExpenses?CarID=@Model.IDCar&AddNew=true&Add=false&Edit=false">اضافة بيانات</a> *@
+            <form asp-action="DetailsExpenses">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center;">اسم اليوم</th>
+                            <th style="text-align:center;">التاريخ</th>
+                            <th style="text-align:center;">نقل من</th>
+                            <th style="text-align:center;">تسليم الى</th>
+                             
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            DateOnly? previousDate = null ;
+                            string color = "#f3f3f3"; // اللون الأصفر
+                            bool isYellow = true;
+                            int? month = null;
+                        }
+                        @foreach (var item in Model.DriversDiary_List)
+                        {
+                            @*HasValue يعني اذا كان فارغ بتعود بقيمه فولس ام اذا كانت القيمه غير فارغة تعود بتروه*@
+                            @*HasValue ترجع قيمه يا True او false *@
+                            @* يعني الشرط قد تحققHasValue  ل  true  اذا كانت القيمه *@
+                            if (previousDate.HasValue && previousDate != item.CreatedDate)
+                            {
+                                // تغيير اللون عندما يكون التاريخ مختلفًا
+                                isYellow = !isYellow;
+                                color = isYellow ? "#f3f3f3" : "#e9e9e9"; // تبديل بين اللون الأصفر والأحمر
+                            }
+                            if(month != item.CreatedDate.Month)
+                            {
+                                <tr>
+                                    <td colspan="4" style="text-align:center">@item.CreatedDate.Month</td>
+                                    
+                                </tr>
+                            }
+                            <tr style="cursor:pointer;" onclick="window.location.href='@Url.Action("ScreenDetailsDriversDiary", "DriversDiary", new { DateDriversDiary = item.CreatedDate, carId = item.car?.Id,DriverID=item.driver?.Id,AddToEdit = true})'">
+                                <td style="text-align:center ;background:@color; ">@item.CreatedDate.ToString("dddd")</td>
+                                <td style="text-align:center;background:@color;">@item.CreatedDate.ToString("yyyy-MM-dd")</td>
+                                <td style="text-align:center;background:@color;">@item.TransportationLocation</td>
+                                <td style="text-align:center;background:@color;">@item.DeliveryLocation</td>
+                                </tr>
+
+                            previousDate = item.CreatedDate;
+                            month = item.CreatedDate.Month;
+                        }
+
+
+                         
+                    </tbody>
+                </table>
+            </form>
+            @section Scripts {
+                @{
+                    //هذا مهم جدا لانه يقوم بفحص اذا البيانات فاغة ولا لا حسب الي موضع في الفيو اذا اخترنا ان يكون في بيانات
+                    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                }
+            }
+
+        </div>
+    </div>
+</div>
+ 

@@ -1,0 +1,308 @@
+﻿@using Newtonsoft.Json
+ 
+<!DOCTYPE html>
+@inject IHttpContextAccessor HttpContextAccessor;
+@*=======================================*@
+ 
+@*=======================================*@
+<style>
+    .dropdown 
+    {
+        margin-top:6px;
+        position: relative;
+        display: inline-block;   
+        padding:0px 0px 7px 0px ;
+        margin:7px 10px 0px 10px ;
+        z-index: 1;  
+    }
+    .dropdown-content 
+    {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        padding: 12px 16px;
+        z-index: 1;
+        box-shadow: 0px 3px 3px 0px rgba(34,64,67,0.3);
+        margin-top:7px;
+        background:#fff;      
+        text-align: center;
+    }
+    .dropdown-content a, .dropdown > button
+    {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: black;
+        text-decoration: none;
+    }
+    .dropdown-content a:hover, .dropdown > button:hover
+    {
+        color: red;
+    }
+    .dropdown:hover .dropdown-content
+    {
+        display: block;
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Accountant</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Accountant.styles.css" asp-append-version="true" />
+</head>
+<body>
+    @{
+        var jsonPagesPermissions = Context.Session.GetString("PagesPermissions");
+        PagesPermissions? pagesPermissions = null;
+        if (jsonPagesPermissions != null)
+        {
+            pagesPermissions = JsonConvert.DeserializeObject<PagesPermissions>(jsonPagesPermissions);
+        }
+
+
+    }
+     
+   
+   
+    <header @* style="position: fixed;top: 0;left: 0;z-index: 9999;" *@>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="padding-bottom: 0px; ">
+            <div class="container-fluid">
+                <a class="navbar-brand"  style="margin-bottom:10px" asp-area="" asp-controller="Home" asp-action="Index">Accountant</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                   
+                    <ul class="navbar-nav flex-grow-1">
+                         <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="MainUserTem" asp-action="ScreenMainUserTemList">
+                                @if (!string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("NameProgramUser")))
+                                {
+                                    @if (HttpContextAccessor?.HttpContext?.Session.GetString("CountMainUserTem") != "0")
+                                    {
+                                        <span style="color:#fff;color:#fff; background:#0A60FF; border-radius:50% ; padding:1px 7px 2px 6px">@HttpContextAccessor?.HttpContext?.Session.GetString("CountMainUserTem")</span>
+
+                                        <span> طلبات جديدة</span>
+                                    }
+                                    else
+                                    {
+                                        <span> طلبات جديدة</span>
+                                         
+                                    }
+                                }
+
+                            </a>
+                        </li>
+                        
+                            <li class="nav-item">
+                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="ProgramUser" asp-action="ScreenProgramUser"> مستخدم </a>
+                            </li>
+
+                      
+                        @if (pagesPermissions?.GeneralUser == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                            <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="GeneralUser" asp-action="ScreenGeneralUser">مستخدمين جدد</a>
+                            </li>
+                        }
+                        @if (pagesPermissions?.Company == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                            <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Company" asp-action="ScreenEditCompany">الشركة</a>
+                            </li>
+                        } 
+                        @if (pagesPermissions?.Driver == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                            <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Driver" asp-action="ScreenDriver">الشوفرية</a>
+                            </li>                            
+                        }
+                        @if (pagesPermissions?.WorkCompanies == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                             <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="WorkCompanies" asp-action="ScreenWorkComp">المقاولين</a>
+                            </li>                            
+                        }
+                        @if (pagesPermissions?.WorkDiary == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                            <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="WorkDiary" asp-action="ScreenWorkDiary">يوميات العمل</a>
+                            </li>
+                        }
+                        @if (pagesPermissions?.Fuel == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                            <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Fuel" asp-action="ScreenFuel">تسجيل السولر</a>
+                            </li>
+                        }
+                        @if (pagesPermissions?.FuelProvider == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                            <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="FuelProvider" asp-action="ScreenFuelProvider">تسجيل مصدر السولر</a>
+                            </li>
+                        }
+                        @if (pagesPermissions?.SparePartsCenters == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                            <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="SparePartsCenters" asp-action="ScreenSparePartsCenters">مركز قطع صيانه</a>
+                            </li>
+                        }
+                        @if (pagesPermissions?.RepairWorkshops == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+
+                            <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="RepairWorkshops" asp-action="ScreenRepairWorkshops">ورشات العمل</a>
+                            </li>
+                        }
+                        @if (pagesPermissions?.Car == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                            <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Car" asp-action="ScreenCar">السيارات</a>
+                            </li>
+                        }
+                        @if (pagesPermissions?.Expenses == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                            <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Expenses" asp-action="ScreenExpenses">المصاريف</a>
+                            </li>
+                        }
+                        @if (pagesPermissions?.DriversDiary == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                           <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="DriversDiary" asp-action="ScreenDriversDiary">تيجبل ايام السائقين</a>
+                            </li> 
+                        }
+                        @if (pagesPermissions?.Briefs == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+
+                            <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Briefs" asp-action="ScreenBriefs">تيجبل الاجازات</a>
+                            </li>
+
+                        }
+                        @if (pagesPermissions?.Monthly == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+
+                            <li class="nav-item">
+                                <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="Monthly" asp-action="ScreenCalendarMonthly">تسجيل شهريات</a>
+                            </li>
+
+                        }
+                        @if (pagesPermissions?.InputCompany == true || pagesPermissions?.TrafficViolations == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                            <li>
+                                <div class="dropdown">
+                                    <button>الزر الرئيسي</button>
+                                    <div class="dropdown-content">
+                                        @if (pagesPermissions?.InputCompany == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                                        {
+                                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="InputCompany" asp-action="ScereenInputCompany">مدخلات للشركة</a>
+
+                                        }
+                                        @if (pagesPermissions?.TrafficViolations == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                                        {
+                                            <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="TrafficViolations" asp-action="ScreenTrafficViolations">تسجيل مخالفات</a>
+
+                                        }
+                                       
+                                    </div>
+                                </div>
+
+                            </li>
+
+                        }
+
+                        @if (pagesPermissions?.ReportscCar == true || !string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("IDMainUser")))
+                        {
+                            <li>
+                                <div class="dropdown">
+                                    <button>التقارير</button>
+                                    <div class="dropdown-content">
+                                        <a style="font-size:15px" class="nav-link text-dark" asp-area="" asp-controller="ReportscCar" asp-action="ScreenReportscCar">تقارير السيارات</a>
+                                        </div>
+                                </div>
+
+                            </li>
+                        }
+                      
+                    </ul>
+                    <div class="navbar-collapse collapse justify-content-end ">
+                        @if (!string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("NameProgramUser")))
+                        {
+                            <ul class="navbar-nav flex-grow">
+                                <li>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Exst"> ProgramUser تسجيل خروج من </a>
+                                </li>
+                            </ul>
+                        }
+                        else if (!string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("NameMainUser")))
+                        {
+                            <ul class="navbar-nav flex-grow">
+                                <li>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Exst"> MainUser  تسجيل خروج من</a>
+                                </li>
+                            </ul>
+                        }
+                        else if (!string.IsNullOrEmpty(HttpContextAccessor?.HttpContext?.Session.GetString("NameGeneralUser")))
+                        {
+                            <ul class="navbar-nav flex-grow">
+                                <li>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Exst"> GeneralUser تسجيل خروج من</a>
+                                </li>
+                            </ul>
+                        }
+                        else
+                        {
+                            <ul class="navbar-nav flex-grow">
+                                <li>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="ScreenLogin">تسجيل دخول</a>
+                                </li>
+                            </ul>
+                        }
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Accountant - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+   
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+   <script>
+        const mainButton = document.getElementById("main-button");
+        const otherButtons = document.getElementsByClassName("other-buttons");
+
+        mainButton.addEventListener("click", () => {
+            for (const button of otherButtons) {
+                button.style.display = "block";
+            }
+        });
+
+   </script>
+   
+    
+</body>
+</html>

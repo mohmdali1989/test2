@@ -1,0 +1,59 @@
+﻿@* <!DOCTYPE html>
+<html>
+<head>
+    <title>واجهة المستخدم الرئيسية</title>
+    <style>
+        /* أسلوب تصميم القائمة الجانبية */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding-top: 20px;
+        }
+
+            .sidebar a {
+                padding: 10px;
+                text-decoration: none;
+                color: white;
+                display: block;
+            }
+
+                .sidebar a:hover {
+                    background-color: #555;
+                }
+
+        /* أسلوب تصميم المحتوى الرئيسي */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#">مستخدم</a>
+        <a href="#">مستخدمين جدد</a>
+        <a href="#">الشركة</a>
+        <!-- أضف باقي الأزرار هنا -->
+        <div class="dropdown">
+            <button class="dropbtn">الصفحات</button>
+            <div class="dropdown-content">
+                <a href="#">تسجيل السيارة</a>
+                <a href="#">تسجيل الترخيص</a>
+                <a href="#">تسجيل التأمين</a>
+                <!-- أضف باقي الصفحات هنا -->
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- هنا يمكنك وضع محتوى الصفحة الرئيسية -->
+        <h1>مرحبًا بك في واجهة المستخدم الرئيسية!</h1>
+        <p>اختر صفحة من القائمة للانتقال إليها.</p>
+    </div>
+</body>
+</html>
+ *@

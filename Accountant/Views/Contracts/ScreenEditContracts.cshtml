@@ -1,0 +1,52 @@
+﻿ @model Contracts
+<form asp-action="ScreenEditContracts">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <div>
+        <input  type="text" asp-for="Id" />
+    </div>
+    <div>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <span asp-validation-for="Messages" class="text-danger"></span>
+        <span asp-validation-for="Error" class="text-danger"></span>
+        <div class="form-group col-md-12">
+            <label asp-for="NameCompany" class="control-label"></label>
+            <input asp-for="NameCompany" class="form-control" />
+            <span asp-validation-for="NameCompany" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label asp-for="NumberHours" class="control-label"></label>
+            <input asp-for="NumberHours" class="form-control" />
+            <span asp-validation-for="NumberHours" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label asp-for="NumberDays" class="control-label"></label>
+            <input asp-for="NumberDays" class="form-control" />
+            <span asp-validation-for="NumberDays" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label asp-for="WatchPrice" class="control-label"></label>
+            <input asp-for="WatchPrice" class="form-control" />
+            <span asp-validation-for="WatchPrice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label asp-for="CompanyWorkSite" class="control-label"></label>
+            <input asp-for="CompanyWorkSite" class="form-control" />
+            <span asp-validation-for="CompanyWorkSite" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-12">
+            <label asp-for="ContractExpiryDate" class="control-label"></label>
+            <input asp-for="ContractExpiryDate" class="form-control" />
+            <span asp-validation-for="ContractExpiryDate" class="text-danger"></span>
+        </div>
+        <div>
+            <input type="submit" value="Create" class="btn btn-primary" />
+            <a asp-action="ScreenContracts"></a>
+        </div>
+        
+    </div>
+ </form>

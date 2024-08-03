@@ -1,0 +1,116 @@
+﻿@model Car
+
+    <style>
+        .div1{
+            display:flex;
+        }
+        .div2 {
+            width: 200px;
+            height: 320px;
+            background: #123456;
+            text-align: center;
+            vertical-align: bottom;
+            border: 3px solid black;
+            border-radius: 20px;
+            display:flex ;
+            justify-content: center;
+            align-items: flex-end;
+            margin:10px
+        }
+
+        .saeve{
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin:10px
+        }
+
+            .saeve input {
+            width:200px;
+        }
+</style> 
+<form asp-action ="ScreenAddCar">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <span asp-validation-for="Messages" class="text-danger"></span>
+    <span asp-validation-for="Error" class="text-danger"></span>
+    <div class="div1">
+        <div class="div2 col-md-3">
+            <a class="a1" href="#">
+
+             </a>
+        </div>
+        <div class="col-md-10">
+            <div class="form-group col-md-12">
+                <label asp-for="NameCar" class="control-label"></label>
+                <input asp-for="NameCar" class="form-control" type="text" pattern="[0-9]+">
+                <span asp-validation-for="NameCar" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="CarNumber" class="control-label"></label>
+                <input asp-for="CarNumber" class="form-control" />
+                <span asp-validation-for="CarNumber" class="text-danger"></span>
+
+                في خطاء منطقي اذا كان الرقم السياره موجود في القاعده ما بيضيف بيانات وبيرجع يحمل الصفحه ويفرغ الحقول سنحل المشكله في وقت لاحق المشكبة بسيطه 
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="CarWeight" class="control-label"></label>
+                <input asp-for="CarWeight" class="form-control" />
+                <span asp-validation-for="CarWeight" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="CarModel" class="control-label"></label>
+                <input asp-for="CarModel" class="form-control" />
+                <span asp-validation-for="CarModel" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="CarType" class="control-label"></label>
+                <input asp-for="CarType" class="form-control" />
+                <span asp-validation-for="CarType" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="MaximumLoad" class="control-label"></label>
+                <input asp-for="MaximumLoad" class="form-control" />
+                <span asp-validation-for="MaximumLoad" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="IDDriver" class="control-label"></label>
+                <select asp-for="IDDriver" class="form-control">
+                    <option value="">--اختر السائق--</option>
+                    @foreach (var item in ViewBag.driver)
+                    {
+
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="IDDriver" class="text-danger"></span>
+
+            </div>
+                       <div class="form-group col-md-12">
+                <label asp-for="InsuranceType" class="control-label"></label>
+                <input asp-for="InsuranceType" class="form-control" />
+                <span asp-validation-for="InsuranceType" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="LicenseStartDate" class="control-label"></label>
+                <input asp-for="LicenseStartDate" class="form-control"   />
+                <span asp-validation-for="LicenseStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="LicenseExpirationDate" class="control-label"></label>
+                <input asp-for="LicenseExpirationDate" class="form-control"   validationMessage="" />
+                <span asp-validation-for="LicenseExpirationDate" class="text-danger"></span>
+            </div>
+            
+        </div>
+    </div>
+    <div class="saeve">
+        <input type="submit" value="Create" class="btn btn-primary" />
+        <a asp-action="ScreenCar">Back to List</a>
+    </div>
+</form>
+@section Scripts {
+    @{
+        //هذا مهم جدا لانه يقوم بفحص اذا البيانات فاغة ولا لا حسب الي موضع في الفيو اذا اخترنا ان يكون في بيانات
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

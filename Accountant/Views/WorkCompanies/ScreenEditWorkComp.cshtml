@@ -1,0 +1,76 @@
+﻿@model WorkCompanies
+
+<form asp-action="ScreenEditWorkComp">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <span asp-validation-for="Messages" class="text-danger"></span>
+    <span asp-validation-for="Error" class="text-danger"></span>
+    <div class="form-group col-md-12">
+         
+        <input asp-for="Id" hidden class="form-control" />
+         
+    </div>
+    <div class="form-group col-md-12">
+        <label asp-for="CompanyName" class="control-label"></label>
+        <input asp-for="CompanyName" class="form-control" />
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
+    </div>
+    <div class="form-group col-md-12">
+        <label asp-for="phoneNumber" class="control-label"></label>
+        <input asp-for="phoneNumber" class="form-control" />
+        <span asp-validation-for="phoneNumber" class="text-danger"></span>
+    </div>
+
+    <div class="form-group col-md-12">
+        <label asp-for="NumberVirtualHours" class="control-label"></label>
+        <input asp-for="NumberVirtualHours" class="form-control" />
+        <span asp-validation-for="NumberVirtualHours" class="text-danger"></span>
+    </div>
+    <div class="form-group col-md-12">
+        <label asp-for="DefaultNumberDays" class="control-label"></label>
+        <input asp-for="DefaultNumberDays" class="form-control" />
+        <span asp-validation-for="DefaultNumberDays" class="text-danger"></span>
+    </div>
+    <div class="form-group col-md-12">
+        <label asp-for="WatchPrice" class="control-label"></label>
+        <input asp-for="WatchPrice" class="form-control" />
+        <span asp-validation-for="WatchPrice" class="text-danger"></span>
+    </div>
+
+    <div class="form-group col-md-12">
+        <label asp-for="CompanyWorkSite" class="control-label"></label>
+        <input asp-for="CompanyWorkSite" class="form-control" />
+        <span asp-validation-for="CompanyWorkSite" class="text-danger"></span>
+    </div>
+    <div class="form-group col-md-12">
+        <label asp-for="PictureOfCntract" class="control-label"></label>
+        <input asp-for="PictureOfCntract" class="form-control" type="file" accept="image/jpeg,image/png,image/gif" id="PictureOfCntract" name="PictureOfCntract" />
+        <span asp-validation-for="PictureOfCntract" class="text-danger"></span>
+    </div>
+    <div class="form-group col-md-12">
+        <label asp-for="ContractExpiryDate" class="control-label"></label>
+        <input asp-for="ContractExpiryDate" class="form-control" />
+        <span asp-validation-for="ContractExpiryDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group" style="margin-top:10px">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+    @*  <script>
+    function updateFields(selectElement) {
+    const selectedValue = selectElement.value;
+    const numberVirtualHoursInput = document.querySelector('[name="NumberVirtualHours"]');
+    const companyNameInput = document.querySelector('[name="CompanyName"]');
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+    const contractName = selectedOption.text; // Get the text of the selected option
+    numberVirtualHoursInput.value = selectedValue;
+    companyNameInput.value = contractName; // Set the company name input to the contract name
+    }
+    </script> *@
+</form>
+@section Scripts {
+    @{
+        //هذا مهم جدا لانه يقوم بفحص اذا البيانات فاغة ولا لا حسب الي موضع في الفيو اذا اخترنا ان يكون في بيانات
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

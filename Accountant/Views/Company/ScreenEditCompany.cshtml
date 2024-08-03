@@ -1,0 +1,38 @@
+﻿@model Company
+
+<form asp-action="ScreenEditCompany">
+
+    <input type="text" asp-for="Id" class="form-control" />
+    <div class="div1">
+        <div class="div2 col-md-3">
+            <a class="a1" href="#">
+
+            </a>
+        </div>
+        <div class="col-md-10">
+            <div class="form-group col-md-12">
+                <label asp-for="CompanyName" class="control-label"></label>
+                <input asp-for="CompanyName" class="form-control" />
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="CompanyFunction" class="control-label"></label>
+                <input asp-for="CompanyFunction" class="form-control" />
+                <span asp-validation-for="CompanyFunction" class="text-danger"></span>
+            </div>
+             
+
+        </div>
+    </div>
+    <div class="saeve">
+        <input type="submit" value="حفظ" class="btn btn-primary" style="margin:-9px 0px" />
+        
+    </div>
+</form>
+
+@section Scripts
+{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

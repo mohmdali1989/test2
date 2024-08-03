@@ -1,0 +1,256 @@
+﻿.StatusButtonworkCompanies {
+    background-color: #00146bc9;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.StatusButtonworkCompaniesNO {
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableDate {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: -1px !important;
+}
+
+.tableDate input {
+    width: 100%;
+    padding: 0px 0px;
+    margin: 0px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(0,0,0,0.0);
+    height: 65px;
+    text-align: center;
+}
+
+.tableDate .input1 input:focus {
+    outline: 2px solid #174be3bf;
+    outline-offset: 2px;
+    border-bottom-left-radius: 14px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+}
+
+.tableDate .input2 input:focus,
+.tableDate .input3 input:focus {
+    outline: 2px solid #174be3bf;
+    outline-offset: 2px;
+    border-radius: 1px;
+    /* box-shadow: inset 0 0 1px #000; /* إضافة خاصية box-shadow */ */
+}
+
+.tableDate .input1 {
+    padding-right: 0px;
+}
+
+.tableDate .input2,
+.tableDate .input3 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.tableDate .input4 {
+    padding-left: 0px;
+}
+
+
+
+.tableDate .input1 input {
+    background: #174be38a;
+    color: #fff;
+    border-bottom-left-radius: 14px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.tableDate .input2 input,
+.tableDate .input3 input {
+    background: #174be38a;
+    color: #fff;
+    border-radius: 0px;
+}
+
+.tableDate .input4 input {
+    background: #174be38a;
+    color: #fff;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+    .tableDate .input4 input[type="submit"] {
+        padding-right: 36px;
+        padding-left: 20px;
+    }
+
+    .tableDate .input4 input:hover {
+        background-color: #45a049;
+        border-bottom-left-radius: 1px;
+        border-top-left-radius: 1px;
+    }
+
+.tableDate .input1 input:hover,
+.tableDate .input2 input:hover,
+.tableDate .input3 input:hover {
+    background: #174be3b3;
+}
+/* ============================================================================ */
+
+
+
+
+.EditTableDate {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: -1px !important;
+}
+
+    .EditTableDate input {
+        width: 100%;
+        padding: 0px 0px;
+        margin: 0px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: rgba(0,0,0,0.0);
+        height: 65px;
+        text-align: center;
+        animation: flash;
+        animation-iteration-count: 3;
+        animation-duration: 0.9s;
+    }
+ 
+
+@keyframes flash {
+    0% {
+        background-color: #e10000ba;
+    }
+
+    50% {
+        background-color:lightcoral;
+    }
+
+    100% {
+        background-color: #e10000ba;
+    }
+}
+.EditTableDate .input1 input:focus {
+    outline: 2px solid red;
+    outline-offset: 2px;
+    border-bottom-left-radius: 14px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+}
+
+.EditTableDate .input2 input:focus,
+.EditTableDate .input3 input:focus {
+    outline: 2px solid red;
+    outline-offset: 2px;
+    border-radius: 1px;
+    /* box-shadow: inset 0 0 1px #000; /* إضافة خاصية box-shadow */
+}
+
+.EditTableDate .input1 {
+    padding-right: 0px;
+}
+
+.EditTableDate .input2,
+.EditTableDate .input3 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.EditTableDate .input4 {
+    padding-left: 0px;
+}
+
+
+
+.EditTableDate .input1 input {
+    background: #e10000ba;
+    color: #fff;
+    border-bottom-left-radius: 14px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.EditTableDate .input2 input,
+.EditTableDate .input3 input {
+    background: #e10000ba;
+    color: #fff;
+    border-radius: 0px;
+}
+
+.EditTableDate .input4 input {
+    background: #e10000ba;
+    color: #fff;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.EditTableDate .input1 input:hover,
+.EditTableDate .input2 input:hover,
+.EditTableDate .input3 input:hover {
+    background: #e10000de;
+}
+
+
+.EditTableDate .input4 input[type="submit"] {
+    padding-right: 36px;
+    padding-left: 20px;
+}
+
+.EditTableDate .input4 input:hover {
+    background-color: #45a049;
+    border-bottom-left-radius: 1px;
+    border-top-left-radius: 1px;
+}
+
+.EditTableDate .inputDate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* ============================================================================ */
+.tableDate .inputDate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputDate::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* يجعل الأيقونة بيضاء  */
+    /* لم اجد طريق لتغيير لون الى اي لون فقط ابيض او اسود  */
+}
+
+
+
+.tableDate input:focus {
+    /* outline:2px solid red; */
+    outline: none;
+}
+
+.td_a a {
+    padding-right: 36px;
+    padding-left: 12px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,96 @@
+﻿@model Accountant.Models.ViewModel.MonthlyViewModel
+<form>
+
+    <table>
+        <thead>
+            <tr>
+
+                @if (Model.Drivers_L.Count != 0)
+                {
+                    @foreach (var item in Model.Drivers_L)
+                    {
+                        @if (item.Id == Model.StatusButtonDrivers)
+                        {
+
+                            <th><a class="btn btn-primary StatusButtonCar" href="~/Monthly/ScreenCalendarMonthly?ID_Dreivr=@item.Id">@item.Name </a></th>
+                        }
+                        else
+                        {
+                            <th><a class="btn btn-primary StatusButtonCar1" href="~/Monthly/ScreenCalendarMonthly?ID_Dreivr=@item.Id">@item.Name </a></th>
+                        }
+                    }
+                }
+                else
+                {
+                    <th><a style="height:120px; width:120px" class="btn btn-primary">لا يوجد مركبات </a></th>
+
+                }
+
+
+
+
+            </tr>
+        </thead>
+    </table>
+    <div style="display:flex">
+        @foreach (var item in Model.driversDiary_L)
+        {
+            int ID_Month = 0;
+            int N_Monthy_M = 0;
+            int N_Monthy_Y = 0;
+            int N_Month_Driver_M = item.CreatedDate.Month;
+            int N_Month_Driver_Y = item.CreatedDate.Year;
+            DateOnly? dateOnly = null;
+            @if(Model.Monthly_L?.Count() > 0 )
+            {
+                
+                
+                foreach (var itemMonthy in Model.Monthly_L)
+                {
+
+                    if (N_Month_Driver_M == itemMonthy.MonthlyReceiptDate.Month && N_Month_Driver_Y == itemMonthy.MonthlyReceiptDate.Year)
+                    {
+                        if (item.CreatedDate.Month == itemMonthy.MonthlyReceiptDate.Month)
+                        {
+
+                            N_Monthy_M = itemMonthy.MonthlyReceiptDate.Month;
+                            N_Monthy_Y = itemMonthy.MonthlyReceiptDate.Year;
+                            dateOnly = itemMonthy.MonthlyReceiptDate;
+                            ID_Month = itemMonthy.id;
+
+
+                        }
+                        
+                    }
+                    
+
+                        
+                }
+            }
+
+
+
+            if (N_Monthy_M == item.CreatedDate.Month && N_Monthy_Y == item.CreatedDate.Year)
+            {
+                <div style="width:200px; height:200px;margin:10px;font-size:35px">
+                    <a style="text-decoration: none;color: #fff;width: 100%;background: #3e5fdd;height: 100%;display: flex;align-items: center;justify-content: center;border-radius: 10px;" href="~/Monthly/ScreenMonthly?Data_Year=@N_Monthy_Y&Data_Month=@N_Monthy_M&ID_Driver=@item.DriverId&Edit_Month=true&ID_Minth=@ID_Month">@item.CreatedDate.Month</a>
+                </div>
+            }
+            else
+            {
+
+                <div style="width:200px; height:200px;margin:10px;font-size:35px">
+                    <a style="text-decoration: none; color: #fff;width: 100%;background: #234;height: 100%;display: flex;align-items: center;justify-content: center;border-radius: 10px;" href="~/Monthly/ScreenMonthly?Data_Year=@N_Month_Driver_Y&Data_Month=@N_Month_Driver_M&ID_Driver=@item.DriverId&Edit_Month=false&ID_Minth=@ID_Month">@item.CreatedDate.Month</a>
+                </div>
+            }
+            
+             
+
+
+
+        }
+    </div>
+   
+
+</form>
+
